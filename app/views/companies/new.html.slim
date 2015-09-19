@@ -1,5 +1,10 @@
-h1 New company
-
-== render 'form'
-
-= link_to 'Back', companies_path
+.row
+  .text-center
+    h1 Nueva Compania
+.row  
+  .col-md-4.col-md-offset-4.text-center
+    = simple_form_for @company do |f|
+      = f.input :legal_name
+      = f.input :fantasy_name
+      = f.input :cuit
+      = f.button :submit

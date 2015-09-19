@@ -1,19 +1,18 @@
-h1 Listing transactions
-
-table
-  thead
-    tr
-      th
-      th
-      th
-
-  tbody
-    - @transactions.each do |transaction|
-      tr
-        td = link_to 'Show', transaction
-        td = link_to 'Edit', edit_transaction_path(transaction)
-        td = link_to 'Destroy', transaction, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Transaction', new_transaction_path
+.text-center
+  h1 Lista de Reciclajes
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Botellas
+          th.text-center Estacion
+          th.text-center Hora
+      tbody
+        - @transactions.each do |transaction|
+          tr
+            td.text-center = transaction.bottles
+            td.text-center = transaction.station.name
+            td.text-center = transaction.time
+.row.text-center
+  = link_to 'Nueva Transaccion', new_transaction_path

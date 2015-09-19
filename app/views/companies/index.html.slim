@@ -1,19 +1,18 @@
-h1 Listing companies
-
-table
-  thead
-    tr
-      th
-      th
-      th
-
-  tbody
-    - @companies.each do |company|
-      tr
-        td = link_to 'Show', company
-        td = link_to 'Edit', edit_company_path(company)
-        td = link_to 'Destroy', company, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Company', new_company_path
+.text-center
+  h1 Lista de Companias
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Nombre Legal
+          th.text-center Nombre de fantasia
+          th.text-center CUIT
+      tbody
+        - @companies.each do |company|
+          tr
+            td.text-center = company.legal_name
+            td.text-center = company.fantasy_name
+            td.text-center = company.cuit
+.row.text-center
+  = link_to 'Nueva Compania', new_company_path
