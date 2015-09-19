@@ -5,7 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :transactions
-  has_many :prizes
   has_many :trades
   belongs_to :company
 end

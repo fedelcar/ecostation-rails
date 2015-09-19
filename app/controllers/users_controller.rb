@@ -4,7 +4,7 @@ class UsersController < InheritedResources::Base
   end
 
   def update
-    user.update_attributes(user_params)
+    current_user.update_attributes(user_params)
     redirect_to edit_user_path
   end
   
@@ -14,7 +14,7 @@ class UsersController < InheritedResources::Base
     end
 
     def user_params
-      params.require(:user).permit(:email, :password)
+      params.require(:user).permit(:email, :password, :first_name, :last_name, :dni)
     end
 end
 

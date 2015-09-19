@@ -1,0 +1,36 @@
+.text-center
+  h1 Lista de Premios
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Premio
+          th.text-center Descripcion
+          th.text-center Cantidad de botellas
+          th.text-center Canjear
+      tbody
+        - @prizes.each do |prize|
+          tr
+            td.text-center = prize.name
+            td.text-center = prize.description
+            td.text-center = prize.bottles
+            td.text-center = link_to 'Canjear', trades_path(prize: prize.id), method: 'post'
+.text-center
+  h1 Premios Canjeados
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Premio
+          th.text-center Descripcion
+          th.text-center Cantidad de botellas
+          th.text-center Fecha
+      tbody
+        - @trades.each do |trade|
+          tr
+            td.text-center = trade.prize.name
+            td.text-center = trade.prize.description
+            td.text-center = trade.prize.bottles
+            td.text-center = trade.date
