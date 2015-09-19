@@ -1,0 +1,23 @@
+nav
+  .row.navbar-header.flex.no-margin
+    .col-md-3
+      = image_tag 'logo_header.png', class: 'header-logo'
+    .col-md-6.text-center
+      = label_tag nil, 'ECOSTATION', class: 'header-title'
+    .col-md-3.text-center
+      = fa_icon "envelope-o", class: 'email-header'
+      = label_tag nil, 'info@ecostation.com', class: 'header-label'
+  .row.navbar-menu.no-margin
+    ul.nav.navbar-nav.flex.navbar-menu
+      li
+        = link_to 'Inicio', root_path, class: 'navbar-link'
+      li
+        = link_to 'Mi perfil', root_path, class: 'navbar-link'
+      li
+        = link_to 'Mis Actividades', root_path, class: 'navbar-link'
+      li
+        = link_to 'Canjear Puntos', root_path, class: 'navbar-link'
+      li
+        = link_to 'Administracion', root_path, class: 'navbar-link'
+      li
+        = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'

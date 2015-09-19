@@ -1,24 +1,25 @@
-h2
-  | Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @validatable
-      em
-        | (
-        = @minimum_password_length
-        |  characters minimum)
-    br
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+#sign-in
+  = image_tag("quote-background-eco3.jpg", class: 'bg')
+  .form-basic
+    .row.no-margin
+      .col-md-12.text-center.sign-up-form
+        .section-title.text-center
+          = label_tag nil, 'Crear Cuenta'
+      .col-md-8.col-md-offset-2
+        = form_for(resource, url: user_registration_path) do |f|
+          div
+            = f.label :email, class: 'form-label login-label green-label'
+            .text-center
+              = f.email_field :email, class: 'input form-input form-login'
+          div
+            = f.label 'Contrasena', class: 'form-label login-label green-label'
+            .text-center
+              = f.password_field :password, class: 'form-input form-login'
+          div
+            = f.label 'Ingresa tu contrasena de nuevo', class: 'form-label login-label green-label'
+            .text-center
+              = f.password_field :password_confirmation, class: 'form-input form-login'
+          .link.blue.text-center
+            = render "devise/shared/links"
+          div.text-center
+            = f.submit 'Crear Cuenta', class: 'btn button-general green-button submit-button full-width-btn'

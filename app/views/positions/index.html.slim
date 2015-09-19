@@ -1,0 +1,19 @@
+h1 Listing positions
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @positions.each do |position|
+      tr
+        td = link_to 'Show', position
+        td = link_to 'Edit', edit_position_path(position)
+        td = link_to 'Destroy', position, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Position', new_position_path

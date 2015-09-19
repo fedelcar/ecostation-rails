@@ -1,11 +1,12 @@
 doctype html
 html
   head
-    title RailsBootstrap
+    title Ecostation
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     = csrf_meta_tags
     = metamagic
   body
-    = render 'layouts/trello_alert'
+    = render 'layouts/navbar' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path)
     = yield

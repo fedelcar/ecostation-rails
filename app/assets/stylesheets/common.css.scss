@@ -1,0 +1,471 @@
+@import 'colors';
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+@import 'colors';
+
+.red-button {
+  color: $red;
+  background-color: $red;
+
+  &:hover,
+  &:focus {
+    color: $grey-1;
+    background-color: $pink;
+  }
+}
+
+.green-button {
+  color: $white;
+  background-color: $light-green;
+
+  &:hover,
+  &:focus {
+    color: $grey-1;
+    background-color: $green-4;
+  }
+}
+
+.grey-label {
+  color: $grey-3;
+}
+
+.red-label {
+  color: $red;
+}
+
+.green-label {
+  color: $light-green;
+}
+
+.green-2-label {
+  color: $green-2;
+}
+
+.green-3-label {
+  color: $green-3;
+}
+
+.green-4-label {
+  color: $green-4;
+}
+
+.green-2-background {
+  background-color: $green-2;
+}
+
+.white-label {
+  color: $white;
+}
+
+.blue {
+  color: $blue-7;
+}
+
+.white-label {
+  color: $white;
+}
+
+.purple-label {
+  color: $purple-2;
+}
+
+.grey-label {
+  color: $grey-3;
+}
+
+.blue-label {
+  color: $blue-7;
+}
+
+.light-blue-label {
+  color: $blue-6;
+}
+
+.blue-5-label {
+  color: $blue-5;
+}
+
+.black-label {
+  color: black;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 4%;
+  width: 100%;
+  background-color: $grey-1;
+}
+
+.notice {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-size: 56px;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: $light-green;
+}
+
+.subtitle {
+  font-family: Ubuntu, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: $blue-7;
+}
+
+.subsection-title {
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  color: $blue-7;
+  margin-bottom: 0;
+}
+
+.radio-label {
+  margin-left: 5px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  color: $grey-3;
+}
+
+input[type=radio] {
+  margin-left: 0;
+}
+
+.button-general {
+  font-size: 18px;
+  font-weight: 700;
+  color: $white;
+  border-radius: 0;
+  transition: all 0.5s ease;
+
+  &:hover,
+  &:focus {
+    color: $grey-1;
+  }
+}
+
+.submit-button {
+  height: 50px;
+  padding: 0 50px;
+  margin-top: 30px;
+}
+
+.full-width-button {
+  width: 100%;
+}
+
+.full-width-input {
+  background-color: $white;
+  height: 44px;
+  padding: 5px;
+  width: 100%;
+}
+
+.left-button {
+  margin-right: 10px;
+  width: calc(100% - 10px);
+  background-color: $grey-3;
+}
+
+.right-button {
+  margin-left: 10px;
+  width: calc(100% - 10px);
+}
+
+.section-title, .button-general, .form-input, .link, .p1, .h1, .h2, .h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form-input {
+  font-size: 18px;
+  font-weight: 400;
+  border: solid 2px $grey-2;
+  color: $light-green;
+  background-color: $grey-1;
+  border: solid 2px $grey-2;
+  border-radius: 0;
+}
+
+.full-width-input {
+  background-color: $white;
+  height: 44px;
+  padding: 5px;
+  width: 100%;
+}
+
+.link {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.nav-pills {
+  margin-bottom: 20px;
+}
+
+.search-field {
+  border: solid 1px $grey-2;
+  font-style: italic;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.grey-background {
+  background-color: $grey-1;
+  padding-bottom: 50px;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-link {
+  margin: 0;
+  width: 100%;
+}
+
+.p1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.p2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.p3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.kaminari-arrow {
+  height: 25px;
+  margin-top: -7px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.kaminari-selected {
+  height: 28px;
+  width: 28px;
+  background-color: $green-2;
+  color: $white;
+  margin: 0 5px;
+  padding-top: 5px;
+}
+
+.kaminari-page {
+  height: 25px;
+  color: black;
+  margin: 0 5px;
+}
+
+.dropdown {
+  background: transparent;
+  font-style: italic;
+  padding-left: 10px;
+  height: 44px;
+  width: 100%;
+  font-style: italic;
+  color: $grey-3;
+  overflow: hidden;
+  background: url("bbh_crossite_menu_dropdown") no-repeat 90% #fff;
+  appearance:none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+}
+
+.half-width {
+  width: 50%;
+}
+
+.input-group input.date-input {
+  height: 44px;
+  width: 50%;
+  margin: 0;
+  border: solid 2px $grey-2;
+  border-radius: 0;
+  font-size: 18px;
+  font-style: italic;
+  text-align: left;
+  padding-left: 15px;
+  color: $grey-3;
+}
+
+.input-group input.date-input.start-date-input {
+  border-right: solid 2px $grey-2;
+}
+
+.input-group input.date-input.end-date-input {
+  border-left: none;
+  background: url("bbh_toolbar_calendar_green") no-repeat 90% #fff;
+  background-size: 28px;
+}
+
+.full-col {
+  padding-right: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.float-right {
+  float: right;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.button-icon {
+  margin-right: 10px;
+  height: 25px;
+  margin-top: -12px;
+}
+
+label.button-label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+.form-separator {
+  border: solid 1px $grey-2;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.dropdown {
+  background: transparent;
+  font-style: italic;
+  padding-left: 10px;
+  height: 44px;
+  width: 100%;
+  font-style: italic;
+  color: $grey-3;
+  overflow: hidden;
+  background: url("bbh_crossite_menu_dropdown") no-repeat 95% #fff;
+  appearance:none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+}
+
+.right-border {
+  border-right: solid 1px $grey-2;
+}
+
+.text-area {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  color: $blue-7;
+  border-style: solid;
+  background-color: $grey-1;
+  resize: none;
+}
+
+.no-left {
+  margin-left: 0;
+}
+
+img.img-icon {
+  height: 30px;
+}
+
+.alert {
+  position: fixed;
+  z-index: 3;
+  width: 90%;
+  left: 5%;
+}
+
+.link-toolbar-button {
+  margin-right: 15px;
+}

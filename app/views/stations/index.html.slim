@@ -1,0 +1,19 @@
+h1 Listing stations
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @stations.each do |station|
+      tr
+        td = link_to 'Show', station
+        td = link_to 'Edit', edit_station_path(station)
+        td = link_to 'Destroy', station, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Station', new_station_path

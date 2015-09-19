@@ -1,18 +1,21 @@
-h2
-  | Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+#sign-in
+  = image_tag("quote-background-eco3.jpg", class: 'bg')
+  .form-basic
+    .row.no-margin
+      .col-md-12.text-center.sign-up-form
+        .section-title.text-center
+          = label_tag nil, 'Iniciar Sesion'
+      .col-md-8.col-md-offset-2
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          div
+            = f.label :usuario, class: 'form-label login-label green-label'
+            .text-center
+              = f.email_field :email, class: 'input form-input form-login'
+          div
+            = f.label :password, class: 'form-label login-label green-label'
+            .text-center
+              = f.password_field :password, class: 'form-input form-login'
+          .link.blue.text-center
+            = render "devise/shared/links"
+          div.text-center
+            = f.submit 'Iniciar Sesion', class: 'btn button-general green-button submit-button full-width-btn'

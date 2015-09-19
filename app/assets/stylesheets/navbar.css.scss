@@ -1,0 +1,58 @@
+@import 'colors';
+
+.navbar-header {
+  margin-top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: $light-green;
+  // background-image: url("quote-background-eco3.jpg");
+  .header-logo {
+    height: 70px;
+    margin-left: 20px;
+  }
+
+  .header-label {
+    color: $white;
+    font-size: 18px;
+  }
+
+  .email-header {
+    font-size: 20px;
+    line-height: 18px;
+    margin-right: 5px;
+    color: $white;
+  }
+}
+
+.navbar-menu {
+  min-height: 50px;
+  width: 100%;
+  background-color: $dark-grey;
+  color: $white;
+
+  li>a:hover {
+    background-color: $light-green;
+    color: $white;
+  }
+}
+
+.navbar-exit {
+  color: $white;
+  height: 20px;
+}
+
+.navbar-link {
+  color: $white;
+  font-size: 18px;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-left: solid 1px $light-grey;
+  border-right: solid 1px $light-grey;
+}
+
+.header-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: $white;
+  font-size: 48px;
+}
