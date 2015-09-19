@@ -32,7 +32,7 @@ gem 'loadjs'
 gem "font-awesome-rails"
 
 gem 'carrierwave'
-
+gem 'simple_form'
 gem 'turbolinks'
 
 gem 'jquery-turbolinks'
