@@ -5,6 +5,7 @@ class TradesController < InheritedResources::Base
     if current_user.bottles >= prize.bottles
       Trade.create(user: current_user, date: Time.zone.today, prize: prize)
       current_user.update_attributes(bottles: current_user.bottles - prize.bottles)
+      flash[:notice] = 'Felicitaciones! Que disfrutes de tu premio'
     else
       flash[:error] = 'No tenes mas botellas pelotudo'
     end

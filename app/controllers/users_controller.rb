@@ -1,4 +1,5 @@
 class UsersController < InheritedResources::Base
+  before_action :authenticate_user!, except: [:new, :sign_up]
   def edit
     @user = User.find(current_user)
   end

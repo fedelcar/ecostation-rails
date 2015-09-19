@@ -1,11 +1,17 @@
-h2
-  | Forgot your password?
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .actions
-    = f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+#sign-in
+  = image_tag("quote-background-eco3.jpg", class: 'bg')
+  .form-basic
+    .row.no-margin
+      .col-md-12.text-center.sign-up-form
+        .section-title.text-center
+          = label_tag nil, 'Recuperar contrasena'
+      .col-md-8.col-md-offset-2
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          div
+            = f.label :usuario, class: 'form-label login-label green-label'
+            .text-center
+              = f.email_field :email, class: 'input form-input form-login'
+          .link.blue.text-center
+            = render "devise/shared/links"
+          div.text-center
+            = f.submit 'Recuperar Contrasena', class: 'btn button-general green-button submit-button full-width-btn'

@@ -8,7 +8,7 @@ html
     = csrf_meta_tags
     = metamagic
   body
-    = render 'layouts/navbar' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path)
+    = render 'layouts/navbar' unless current_page?(new_user_password_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path)
     .text-center.h2.row.alert
       = bootstrap_flash
     = yield

@@ -11,7 +11,7 @@ nav
       .row
         = label_tag nil, 'Botellas Acumuladas:', class: 'header-label regular'
         '
-        = label_tag nil, current_user.present? ? current_user.bottles : 0, class: 'bold header-label'
+        = label_tag nil, current_user.bottles.present? ? current_user.bottles : 0, class: 'bold header-label'
   .row.navbar-menu.no-margin
     ul.nav.navbar-nav.flex.navbar-menu
       li
