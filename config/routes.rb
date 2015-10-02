@@ -3,7 +3,11 @@ Ecostation::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   resources :users
-  resources :transactions
+  resources :transactions do
+    collection do
+      post :ecostation
+    end
+  end
   resources :prizes
   resources :positions
   resources :trades
