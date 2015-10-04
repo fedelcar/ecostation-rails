@@ -1,5 +1,6 @@
 class TransactionsController < InheritedResources::Base
   skip_before_filter :verify_authenticity_token, only: :ecostation
+  skip_before_action :authenticate_user!, only: :ecostation
 
   def new
     @transaction = Transaction.new
