@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # to do: que sea el default en la db
   before_validation(on: :create) do
     self.bottles = 0
   end
