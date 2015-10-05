@@ -1,11 +1,13 @@
-.row
-  .text-center
-    h1 Editar Perfil
-.row  
-  .col-md-4.col-md-offset-4.text-center
-    = simple_form_for @user do |f|
-      = f.input :first_name
-      = f.input :last_name
-      = f.input :dni
-      = f.input :email
-      = f.button :submit
+= image_tag('background-1.jpg', class: 'bg')
+.container-fluid.margin-top.col-md-offset-2.col-md-8.container.text-center
+  .row
+    .text-center
+      h1 Editar Perfil
+  .row
+    .col-md-4.col-md-offset-4.text-center
+      = simple_form_for @user do |f|
+        = f.input :first_name
+        = f.input :last_name
+        = f.input :dni
+        = f.input :email
+        = f.button :submit
