@@ -1,4 +1,4 @@
-class PositionsController < InheritedResources::Base
+class PositionsController < ApplicationController
 
   private
 

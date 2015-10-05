@@ -1,4 +1,4 @@
-class StationsController < InheritedResources::Base
+class StationsController  < ApplicationController
 
   private
 

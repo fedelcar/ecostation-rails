@@ -1,4 +1,4 @@
-class PrizesController < InheritedResources::Base
+class PrizesController  < ApplicationController
 
   def index
     @prizes = Prize.all

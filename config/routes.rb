@@ -1,18 +1,19 @@
 Ecostation::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   devise_for :users
   resources :users
+  resources :positions
+  resources :trades
+  resources :companies
+  resources :stations
+  resources :prizes
   resources :transactions do
     collection do
       post :ecostation
     end
   end
-  resources :prizes
-  resources :positions
-  resources :trades
-  resources :companies
-  resources :stations
   root to: 'statics#home'
 
   require 'sidekiq/web'

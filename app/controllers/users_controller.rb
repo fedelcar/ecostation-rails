@@ -1,4 +1,4 @@
-class UsersController < InheritedResources::Base
+class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:new, :sign_up]
   def edit
     @user = User.find(current_user)
@@ -8,7 +8,7 @@ class UsersController < InheritedResources::Base
     current_user.update_attributes(user_params)
     redirect_to edit_user_path
   end
-  
+
   private
     def user
       @user ||= User.find(params[:id])

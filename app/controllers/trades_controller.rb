@@ -1,4 +1,4 @@
-class TradesController < InheritedResources::Base
+class TradesController  < ApplicationController
 
   def create
     prize = Prize.find(params[:prize])
