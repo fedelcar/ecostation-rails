@@ -1,0 +1,16 @@
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Premio
+          th.text-center Descripcion
+          th.text-center Cantidad de botellas
+          th.text-center Fecha
+      tbody
+        - trades.each do |trade|
+          tr
+            td.text-center = trade.prize.name
+            td.text-center = trade.prize.description
+            td.text-center = trade.prize.bottles
+            td.text-center = trade.date

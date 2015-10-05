@@ -1,1 +1,17 @@
-h1 Aguante Ecostation lokooo
+= image_tag('background-1.jpg', class: 'bg')
+.container-fluid.margin-top.col-md-offset-2.col-md-8.container.text-center
+  = label_tag nil, 'Actualmente tenés ', class: 'bottle-title'
+  = label_tag nil, @bottles, class: 'bottle-title-number bottle-title'
+  = label_tag nil, ' botellas acumuladas', class: 'bottle-title'
+  - if !@transactions.count.zero?
+    .margin-top
+      =label_tag nil, 'Últimas Transacciones', class: 'table-header'
+      = render partial: 'transactions/table', locals: { transactions: @transactions }
+      - if !@trades.count.zero?
+        .margin-top
+          =label_tag nil, 'Premios Canjeados', class: 'table-header'
+          = render partial: 'trades/table', locals: { trades: @trades }
+      - else
+        h2 Aún no has canjeado premios. #{link_to 'Hacelo acá', prizes_path}
+  - else
+    h2 'Aún no has reciclado botellas!'

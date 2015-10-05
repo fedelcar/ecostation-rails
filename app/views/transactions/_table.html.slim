@@ -1,0 +1,14 @@
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Cantidad de Botellas
+          th.text-center Lugar
+          th.text-center Fecha y Hora
+      tbody
+        - transactions.each do |transaction|
+          tr
+            td.text-center = transaction.bottles
+            td.text-center = transaction.station.name
+            td.text-center = date_and_time(transaction.time)

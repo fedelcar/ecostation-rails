@@ -1,3 +1,31 @@
-// Place all the styles related to the Statics controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+.bottle-title {
+  margin-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: $dark-grey;
+  font-size: 48px;
+  line-height: 80px;
+}
+
+.bottle-title-number {
+  color: $dark-green;
+  padding: 0 8px;
+  font-size: 80px;
+}
+
+.container {
+  background-color: $white;
+  margin-top: 50px;
+  padding: 15px 25px;
+}
+
+.table-header {
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: $light-green;
+  font-size: 30px;
+  line-height: 30px;
+}

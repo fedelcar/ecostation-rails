@@ -1,0 +1,16 @@
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Premio
+          th.text-center Descripcion
+          th.text-center Cantidad de botellas
+          th.text-center Canjear
+      tbody
+        - prizes.each do |prize|
+          tr
+            td.text-center = prize.name
+            td.text-center = prize.description
+            td.text-center = prize.bottles
+            td.text-center = trade_link(current_user.bottles, prize)
