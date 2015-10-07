@@ -89,7 +89,7 @@ es:
       confirmation: "Si, estoy seguro"
       new_model: "%{name} (nuevo)"
       one_char: caracter
-      optional: Opcional
+      optional: ""
       required: Requerido
       save: Guardar
       save_and_add_another: Guardar y añadir otro
