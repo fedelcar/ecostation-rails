@@ -1,4 +1,6 @@
 RailsAdmin.config do |config|
+  config.authorize_with :pundit
+  config.current_user_method(&:current_user)
   config.actions do
     # root actions
     dashboard                     # mandatory

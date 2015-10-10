@@ -48,6 +48,7 @@ gem 'foreman'
 # Rails Admin
 gem 'rails_admin'
 gem 'rails_admin_flatly_theme', github: 'konjoot/rails_admin_flatly_theme'
+gem 'rails_admin_pundit', github: "sudosu/rails_admin_pundit"
 
 gem 'inherited_resources'
 gem 'formtastic'

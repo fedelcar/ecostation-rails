@@ -14,6 +14,14 @@ GIT
     active_model_serializers (0.8.3)
       activemodel (>= 3.0)
 
+GIT
+  remote: git://github.com/sudosu/rails_admin_pundit.git
+  revision: 285e3e79a37242cf7a527053e9b438782801557a
+  specs:
+    rails_admin_pundit (0.0.1)
+      pundit (>= 0.2.3)
+      rails_admin (>= 0.6.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -441,6 +449,7 @@ DEPENDENCIES
   rails_12factor
   rails_admin
   rails_admin_flatly_theme!
+  rails_admin_pundit!
   ransack
   recipient_interceptor
   responders (= 2.0)
