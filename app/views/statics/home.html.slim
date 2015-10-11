@@ -3,6 +3,14 @@
   = label_tag nil, 'Actualmente tenés ', class: 'bottle-title'
   = label_tag nil, @bottles, class: 'bottle-title-number bottle-title'
   = label_tag nil, ' botellas acumuladas', class: 'bottle-title'
+  = label_tag nil, 'Acercate a tu EcoStation más cercana!', class: 'table-header'
+  - @stations.each.with_index do |station, i|
+    .coords
+      = hidden_field_tag("lat", station.positions.last.lat, id: "lat")
+      = hidden_field_tag("lng", station.positions.last.lng, id: "lng")
+  .map-container
+    #map
+
   - if !@transactions.count.zero?
     .margin-top
       =label_tag nil, 'Últimas Transacciones', class: 'table-header'
@@ -15,3 +23,15 @@
         h2 Aún no has canjeado premios. #{link_to 'Hacelo acá', prizes_path}
   - else
     h2 Aún no has reciclado botellas!
+
+javascript:
+  var handler = Gmaps.build('Google');
+  var stations = []
+  $( ".coords" ).each(function( index ) {
+    stations.push({lat: $(this).find("#lat").val(), lng: $(this).find("#lng").val()})
+  });
+  handler.buildMap({ internal: {id: 'map'}}, function(){
+    var markers = handler.addMarkers(stations);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });

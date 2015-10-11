@@ -45,6 +45,9 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers', br
 
 gem 'foreman'
 
+gem 'gmaps4rails'
+gem 'underscore-rails'
+
 # Rails Admin
 gem 'rails_admin'
 gem 'rails_admin_flatly_theme', github: 'konjoot/rails_admin_flatly_theme'
