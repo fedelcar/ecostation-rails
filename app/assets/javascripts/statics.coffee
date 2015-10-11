@@ -1,3 +1,14 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(window).load ->
+  handler = Gmaps.build('Google')
+  stations = []
+  $('.coords').each (index) ->
+    stations.push
+      lat: $(this).find('#lat').val()
+      lng: $(this).find('#lng').val()
+    return
+  handler.buildMap { internal: id: 'map' }, ->
+    markers = handler.addMarkers(stations)
+    handler.bounds.extendWith markers
+    handler.fitMapToBounds()
+    return
+  return

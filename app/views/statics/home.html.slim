@@ -10,7 +10,6 @@
       = hidden_field_tag("lng", station.positions.last.lng, id: "lng")
   .map-container
     #map
-
   - if !@transactions.count.zero?
     .margin-top
       =label_tag nil, 'Últimas Transacciones', class: 'table-header'
@@ -23,15 +22,3 @@
         h2 Aún no has canjeado premios. #{link_to 'Hacelo acá', prizes_path}
   - else
     h2 Aún no has reciclado botellas!
-
-javascript:
-  var handler = Gmaps.build('Google');
-  var stations = []
-  $( ".coords" ).each(function( index ) {
-    stations.push({lat: $(this).find("#lat").val(), lng: $(this).find("#lng").val()})
-  });
-  handler.buildMap({ internal: {id: 'map'}}, function(){
-    var markers = handler.addMarkers(stations);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-  });

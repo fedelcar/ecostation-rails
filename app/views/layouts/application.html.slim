@@ -3,14 +3,13 @@ html
   head
     title Ecostation
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry", "data-turbolinks-track" => true
-    = javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", "data-turbolinks-track" => true
+    = javascript_include_tag "https://maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry"
+    = javascript_include_tag "https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
     = javascript_include_tag "application", "data-turbolinks-track" => true
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     = csrf_meta_tags
     = metamagic
   body
     = render 'layouts/navbar' unless current_page?(new_user_password_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(new_user_path) || controller.controller_name == 'sessions'
-    .text-center.h2.row.alert
-      / = bootstrap_flash
     = yield
