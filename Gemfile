@@ -139,4 +139,5 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'recipient_interceptor'
+  gem 'puma_worker_killer'
 end

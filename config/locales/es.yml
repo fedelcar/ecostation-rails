@@ -162,10 +162,10 @@ es:
         other: Canjes
       station:
         one: Estación
-        other: Estaciónes
+        other: Estaciones
       position:
         one: Posición
-        other: Posiciónes
+        other: Posiciones
     attributes:
       user:
         transactions: Reciclajes
