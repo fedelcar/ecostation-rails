@@ -1,6 +1,10 @@
 RailsAdmin.config do |config|
   config.authorize_with :pundit
   config.current_user_method(&:current_user)
+  config.label_methods << :legal_name
+  config.label_methods << :description
+  config.label_methods << :email
+
   config.actions do
     # root actions
     dashboard                     # mandatory

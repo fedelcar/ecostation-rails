@@ -145,13 +145,27 @@ es:
         other: "%{count} horas"
   activerecord:
     models:
-      user: Usuario
-      company: Compañía
-      prize: Premio
-      transaction: Reciclaje
-      trade: Canje
-      station: Estación
-      position: Posición
+      user:
+        one: Usuario
+        other: Usuarios
+      company:
+        one: Compañía
+        other: Compañías
+      prize:
+        one: Premio
+        other: Premios
+      transaction:
+        one: Reciclaje
+        other: Reciclajes
+      trade:
+        one: Canje
+        other: Canjes
+      station:
+        one: Estación
+        other: Estaciónes
+      position:
+        one: Posición
+        other: Posiciónes
     attributes:
       user:
         transactions: Reciclajes
