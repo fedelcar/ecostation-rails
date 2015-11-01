@@ -222,3 +222,51 @@ es:
         description: Descripción
         created_at: Creado
         updated_at: Modificado
+  date:
+    formats:
+      long: "%d/%m/%Y"
+  time:
+    formats:
+      long: "%d/%m/%Y %H:%M"
+  activerecord:
+    errors:
+      models:
+        prize:
+          attributes:
+            bottles:
+              blank: Ingrese la cantidad de botellas
+            company:
+              blanck: Seleccione una compañía
+        transaction:
+          attributes:
+            user:
+              blank: Seleccione un usuario
+        trade:
+          attributes:
+            user:
+              blank: Seleccione un usuario
+            prize:
+              blank: Seleccione un premio
+        station:
+          attributes:
+            company:
+              blank: Seleccione una compañía
+        user:
+          attributes:
+            email:
+              taken: Este email ya esta siendo utilizado
+              blank: Ingrese un email
+            rfid:
+              taken: Tarjeta RFID ya utilizada por otro usuario
+            company:
+              blanck: Seleccione una compañía
+        company:
+          attributes:
+            cuit:
+              blank: Ingrese el CUIT
+              taken: CUIT ya utilizado
+            legal_name:
+              blank: Ingrese el nombre legal
+              taken: Nombre ya utilizado
+
+

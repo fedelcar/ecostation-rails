@@ -12,13 +12,13 @@ RailsAdmin.config do |config|
     index                         # mandatory
     new
     export
-    history_index
+    # history_index
     bulk_delete
     # member actions
     show
     edit
     delete
-    history_show
+    # history_show
     # show_in_app do
     #   except ['Company', 'Prize']
     # end

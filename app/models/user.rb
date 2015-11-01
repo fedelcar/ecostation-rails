@@ -12,4 +12,7 @@ class User < ActiveRecord::Base
   has_many :transactions
   has_many :trades
   belongs_to :company
+
+  validates :email, presence: true
+  validates :rfid, :email, uniqueness: true
 end

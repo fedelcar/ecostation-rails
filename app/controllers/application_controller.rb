@@ -10,8 +10,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(_resource)
-    session[:previous_url] || root_path unless current_user.admin?
-    rails_admin_path
+    if current_user.admin?
+      rails_admin_path
+    else
+      root_path
+    end
   end
 
   def after_sign_out_path_for(_resource)

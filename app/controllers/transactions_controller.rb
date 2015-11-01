@@ -19,11 +19,9 @@ class TransactionsController  < ApplicationController
   def ecostation
     if user = User.find_by(rfid: params[:rfid])
       bottles = params[:bottlesCount].to_i
-      user.bottles += bottles
-      user.save
       Transaction.create(user: user, bottles: bottles, time: Time.zone.now,
                          station_id: params[:stationId].to_i)
-      render json: {user: user.email, bottles: user.bottles}, status: 200
+      render json: {user: user.email, bottles: user.bottles + bottles}, status: 200
     else
       render json: {error: 'Invalid RFID'}, status: 404
     end
