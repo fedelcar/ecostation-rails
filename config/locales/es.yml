@@ -144,6 +144,47 @@ es:
         one: 'Apróx. una hora'
         other: "%{count} horas"
   activerecord:
+    errors:
+      models:
+        prize:
+          attributes:
+            bottles:
+              blank: Ingrese la cantidad de botellas
+            company:
+              blanck: Seleccione una compañía
+        transaction:
+          attributes:
+            user:
+              blank: Seleccione un usuario
+            station:
+              blank: Seleccione una Estación
+        trade:
+          attributes:
+            user:
+              blank: Seleccione un usuario
+            prize:
+              blank: Seleccione un premio
+        station:
+          attributes:
+            company:
+              blank: Seleccione una compañía
+        user:
+          attributes:
+            email:
+              taken: Este email ya esta siendo utilizado
+              blank: Ingrese un email
+            rfid:
+              taken: Tarjeta RFID ya utilizada por otro usuario
+            company:
+              blanck: Seleccione una compañía
+        company:
+          attributes:
+            cuit:
+              blank: Ingrese el CUIT
+              taken: CUIT ya utilizado
+            legal_name:
+              blank: Ingrese el nombre legal
+              taken: Nombre ya utilizado
     models:
       user:
         one: Usuario
@@ -228,45 +269,5 @@ es:
   time:
     formats:
       long: "%d/%m/%Y %H:%M"
-  activerecord:
-    errors:
-      models:
-        prize:
-          attributes:
-            bottles:
-              blank: Ingrese la cantidad de botellas
-            company:
-              blanck: Seleccione una compañía
-        transaction:
-          attributes:
-            user:
-              blank: Seleccione un usuario
-        trade:
-          attributes:
-            user:
-              blank: Seleccione un usuario
-            prize:
-              blank: Seleccione un premio
-        station:
-          attributes:
-            company:
-              blank: Seleccione una compañía
-        user:
-          attributes:
-            email:
-              taken: Este email ya esta siendo utilizado
-              blank: Ingrese un email
-            rfid:
-              taken: Tarjeta RFID ya utilizada por otro usuario
-            company:
-              blanck: Seleccione una compañía
-        company:
-          attributes:
-            cuit:
-              blank: Ingrese el CUIT
-              taken: CUIT ya utilizado
-            legal_name:
-              blank: Ingrese el nombre legal
-              taken: Nombre ya utilizado
 
 
