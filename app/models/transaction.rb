@@ -2,7 +2,8 @@ class Transaction < ActiveRecord::Base
   belongs_to :user
   belongs_to :station
 
-  validates :user,:station, presence: true
+  validates :user, :station, :bottles, :time, presence: true
+  validates :bottles, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
   validate :company_owns_station
   after_create :update_user_bottle_count
 

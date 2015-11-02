@@ -79,7 +79,7 @@ es:
       object_not_found: "%{model} con id '%{id}' no se pudo encontrar"
       successful: "%{name} %{action} con éxito"
     form:
-      all_of_the_following_related_items_will_be_deleted: "? Los siguientes elementos relacionados pueden ser eliminados o quedar huérfanos:"
+      all_of_the_following_related_items_will_be_deleted: "? Los siguientes datos y actividades se perderán: "
       are_you_sure_you_want_to_delete_the_object: "¿Está seguro de que quiere eliminar este %{model_name}"
       basic_info: Información Básica
       bulk_delete: 'Los siguientes objetos serán eliminados, lo cual puede eliminar o dejar huérfanas algunas de sus dependencias relacionadas:'
@@ -154,20 +154,38 @@ es:
               blanck: Seleccione una compañía
         transaction:
           attributes:
+            time:
+              blank: Ingrese una fecha
             user:
               blank: Seleccione un usuario
             station:
               blank: Seleccione una Estación
+            bottles:
+              greater_than_or_equal_to: Ingrese una cantidad de botellas mayor a 0
+        position:
+          attributes:
+            lat:
+              blank: Ingrese la latitud
+            lng:
+              blank: Ingrese la longitud
+            description:
+              blank: Ingrese una descripción
         trade:
           attributes:
             user:
               blank: Seleccione un usuario
             prize:
               blank: Seleccione un premio
+            date:
+              blank: Ingrese una fecha
         station:
           attributes:
             company:
               blank: Seleccione una compañía
+            position:
+              blank: Seleccione una posición
+            name:
+              blank: Ingrese un nombre
         user:
           attributes:
             email:
@@ -220,6 +238,13 @@ es:
         password: Contraseña
         created_at: Creado
         updated_at: Modificado
+        reset_password_token: Token de Reset de contraseña
+        reset_password_sent_at: Fecha de reset de contraseña
+        remember_created_at: Recordar fecha de creación
+        site_admin: Administrador general
+        admin: Administrador de compañía
+        encrypted_password: Password encriptada
+        password_confirmation: Repetir contraseña
       company:
         legal_name: Nombre legal
         fantasy_name: Nombre de fantasía
@@ -232,13 +257,13 @@ es:
       prize:
         name: Nombre
         description: Descripción
-        bottles: Botellas
+        bottles: Cantidad de Botellas
         company: Compañía
         created_at: Creado
         updated_at: Modificado
       transaction:
         user: Usuario
-        bottles: Botellas
+        bottles: Cantidad de Botellas
         time: Fecha
         station: Estación
         created_at: Creado
@@ -256,8 +281,8 @@ es:
         created_at: Creado
         updated_at: Modificado
       position:
-        latitude: Latitud
-        longitude: Longitud
+        lat: Latitud
+        lng: Longitud
         date: Fecha
         station: Estación
         description: Descripción

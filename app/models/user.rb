@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable
+         :recoverable, :rememberable, :validatable
 
   # to do: que sea el default en la db
   before_validation(on: :create) do
@@ -14,5 +14,6 @@ class User < ActiveRecord::Base
   belongs_to :company
 
   validates :email, presence: true
-  validates :rfid, :email, uniqueness: true
+  validates :email, uniqueness: true
+  validates_uniqueness_of :rfid, allow_blank: true
 end

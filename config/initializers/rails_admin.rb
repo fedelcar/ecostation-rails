@@ -24,4 +24,14 @@ RailsAdmin.config do |config|
     #   except ['Company', 'Prize']
     # end
   end
+
+  config.model 'User' do
+    edit do
+      include_all_fields # all other default fields will be added after, conveniently
+      exclude_fields :reset_password_sent_at, :reset_password_token, :remember_created_at, :transactions, :trades
+      field :password_confirmation do
+        label "Repetir contraseña"
+      end
+    end
+  end
 end
