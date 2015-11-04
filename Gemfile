@@ -38,6 +38,7 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 
 gem 'devise'
+gem 'devise-i18n'
 
 gem 'responders', '2.0'
 

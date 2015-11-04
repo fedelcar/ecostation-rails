@@ -12,4 +12,6 @@ html
     = metamagic
   body
     = render 'layouts/navbar' unless current_page?(new_user_password_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path) || current_page?(new_user_path) || controller.controller_name == 'sessions'
+    .text-center.h2.row.alert
+        = bootstrap_flash
     = yield

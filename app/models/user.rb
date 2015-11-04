@@ -7,6 +7,16 @@ class User < ActiveRecord::Base
   # to do: que sea el default en la db
   before_validation(on: :create) do
     self.bottles = 0
+    self.title = "#{self.first_name} #{self.last_name}"
+  end
+
+  scope :own, -> { where("company_id=?", self.current.company_id) unless self.current.site_admin }
+
+  def self.current
+    Thread.current[:user]
+  end
+  def self.current=(user)
+    Thread.current[:user] = user
   end
 
   has_many :transactions

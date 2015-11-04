@@ -8,12 +8,13 @@ class PositionPolicy < ApplicationPolicy
           super
       end
     elsif user.admin?
-      case action
-        when :destroy, :edit
-          false
-        else
-          super
+      false
+      # case action
+      #   when :destroy, :edit
+      #     false
+      #   else
+      #     super
+    # end
     end
-      end
   end
 end

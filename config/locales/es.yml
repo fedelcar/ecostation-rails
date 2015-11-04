@@ -40,7 +40,7 @@ es:
       index:
         breadcrumb: "%{model_label_plural}"
         menu: Lista
-        title: Lista de %{model_label_plural}
+        title: "%{model_label_plural}"
       new:
         breadcrumb: Nuevo
         done: creado

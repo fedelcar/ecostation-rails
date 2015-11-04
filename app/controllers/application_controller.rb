@@ -1,9 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :authenticate_user!, except: [:new, :sign_up]
+  before_filter :set_current_user
   include Pundit
 
   private
+
+  def set_current_user
+    User.current = current_user
+  end
 
   def after_sign_up_path_for(_resource)
     session[:previous_url] || root_path

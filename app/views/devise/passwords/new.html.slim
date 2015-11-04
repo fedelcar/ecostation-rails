@@ -4,7 +4,7 @@
     .row.no-margin
       .col-md-12.text-center.sign-up-form
         .section-title.text-center
-          = label_tag nil, 'Recuperar contrasena'
+          = label_tag nil, 'Recuperar contraseña'
       .col-md-8.col-md-offset-2
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           div
@@ -14,4 +14,4 @@
           .link.blue.text-center
             = render "devise/shared/links"
           div.text-center
-            = f.submit 'Recuperar Contrasena', class: 'btn button-general green-button submit-button full-width-btn'
+            = f.submit 'Recuperar contraseña', class: 'btn button-general green-button submit-button full-width-btn'
