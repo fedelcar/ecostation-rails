@@ -211,7 +211,7 @@ es:
               too_short: La contraseña debe tener 8 caracteres como mínimo
             dni:
               less_than_or_equal_to: Ingrese un DNI válido
-              not_a_number: El DNI debe ser numérico
+              not_a_number: El DNI es obligatorio y debe ser numérico
         company:
           attributes:
             cuit:
