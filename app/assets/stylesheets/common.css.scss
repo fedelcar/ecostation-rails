@@ -9,6 +9,10 @@
 
 @import 'colors';
 
+.alert-success {
+  display: none;
+}
+
 .red-button {
   color: $red;
   background-color: $red;

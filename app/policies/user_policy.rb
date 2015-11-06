@@ -10,9 +10,9 @@ class UserPolicy < ApplicationPolicy
     elsif user.admin? && !user.site_admin?
       case action
         when :destroy, :edit
-          false
+          true
         when :show
-          scope.where(company_id: self.user.company_id)
+          true
         else
           super
     end
