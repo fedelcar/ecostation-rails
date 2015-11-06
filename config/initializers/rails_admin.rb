@@ -26,7 +26,7 @@ RailsAdmin.config do |config|
 
   config.model 'Transaction' do
     list do
-      scopes [:own, nil]
+      scopes [:own]
     end
     edit do
       include_all_fields
@@ -38,10 +38,10 @@ RailsAdmin.config do |config|
 
   config.model 'Trade' do
     list do
-      scopes [:own, nil]
+      scopes [:own]
     end
     edit do
-      field :comapny_id do
+      field :company_id do
         visible false
       end
     end
@@ -58,7 +58,7 @@ RailsAdmin.config do |config|
 
   config.model 'Prize' do
     list do
-      scopes [:own, nil]
+      scopes [:own]
     end
   end
 
@@ -70,7 +70,7 @@ RailsAdmin.config do |config|
       field :dni
       field :bottles
       field :company
-      scopes [:own, nil]
+      scopes [:own]
     end
 
     show do

@@ -276,6 +276,7 @@ es:
         station: Estación
         created_at: Creado
         updated_at: Modificado
+        company: Compañía
       trade:
         date: Fecha
         user: Usuario
