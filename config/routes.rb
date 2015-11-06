@@ -14,6 +14,7 @@ Ecostation::Application.routes.draw do
       post :ecostation
     end
   end
+  get 'faq', to: 'statics#faq'
   root to: 'statics#home'
 
   require 'sidekiq/web'

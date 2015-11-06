@@ -22,4 +22,6 @@ nav
         li
           = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
       li
+        = link_to 'Ayuda', '/faq', class: 'navbar-link'
+      li
         = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'

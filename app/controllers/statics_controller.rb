@@ -8,4 +8,7 @@ class StaticsController < ApplicationController
       @stations = current_user.company.stations if current_user.company.present?
     end
   end
+
+  def faq
+  end
 end
