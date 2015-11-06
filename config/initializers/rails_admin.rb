@@ -50,6 +50,11 @@ RailsAdmin.config do |config|
     edit do
       include_all_fields # all other default fields will be added after, conveniently
       exclude_fields :reset_password_sent_at, :reset_password_token, :remember_created_at, :transactions, :trades, :title
+      field :site_admin do
+        visible do
+          bindings[:view]._current_user.site_admin?
+        end
+      end
       field :password_confirmation do
         label "Repetir contraseña"
       end

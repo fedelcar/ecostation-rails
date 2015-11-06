@@ -5,11 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   # to do: que sea el default en la db
+  validate :user_belongs_to_company
   before_validation(on: :create) do
     self.bottles = 0
-    if !self.current.site_admin && self.site_admin
-      errors.add("No puede crear un usuario administrador de sitio sin serlo")
-    end
     self.title = "#{self.first_name} #{self.last_name}"
   end
 
@@ -18,8 +16,19 @@ class User < ActiveRecord::Base
   def self.current
     Thread.current[:user]
   end
+
   def self.current=(user)
     Thread.current[:user] = user
+  end
+
+  def user_belongs_to_company
+    if self.company.present? and User.current.present?
+      company = self.company
+      father = User.current.company
+      if father != company
+        errors.add(:company, "No puede crear un usuario para otra empresa")
+      end
+    end
   end
 
   has_many :transactions
