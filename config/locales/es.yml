@@ -150,7 +150,7 @@ es:
           attributes:
             bottles:
               blank: Ingrese la cantidad de botellas
-	      not_a_number: Ingrese una cantidad de botellas validas
+	            not_a_number: Ingrese una cantidad de botellas validas
             company:
               blank: Seleccione una compañía
 	      name:
