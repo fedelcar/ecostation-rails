@@ -1,8 +1,8 @@
-= image_tag('background-1.jpg', class: 'bg')
+= image_tag('im3.png', class: 'bg')
 .container-fluid.margin-top.col-md-offset-2.col-md-8.container.text-center
   .text-center
-    h1 Premios
+    h1.green-label Premios
     = render partial: 'prizes/table', locals: { prizes: @prizes }
   .text-center
-    h1 Premios Canjeados
+    h1.green-label Premios Canjeados
     = render partial: 'trades/table', locals: { trades: @trades }
