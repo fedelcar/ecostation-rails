@@ -13,7 +13,7 @@ class Prize < ActiveRecord::Base
     if self.company.present? and User.current.present?
       company = self.company
       station = User.current.company
-      if station.company != company
+      if station != company
         errors.add(:company, "No puede asignarle premios a otra empresa.")
       end
     end
