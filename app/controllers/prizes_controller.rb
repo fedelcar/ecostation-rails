@@ -1,7 +1,7 @@
 class PrizesController  < ApplicationController
 
   def index
-    @prizes = Prize.all.order(bottles: :asc)
+    @prizes = current_user.company.prizes.order(bottles: :asc)
     @trades = Trade.where(user: current_user).includes(:prize)
   end
 

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_action :authenticate_user!, except: [:new, :sign_up]
+  before_action :authenticate_user!, except: [:new_user_session, :sign_up, :sign_in]
   before_action :set_current_user
   include Pundit
 
@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(_resource)
-    if current_user.admin?
+    if current_user.admin? || current_user.site_admin?
       rails_admin_path
     else
       root_path
