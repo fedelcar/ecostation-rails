@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   has_many :trades
   belongs_to :company
 
-  validates :email, uniqueness: true, presence: true
+  validates_uniqueness_of :email, allow_blank: false
   validates_numericality_of :bottles, greater_than_or_equal_to: 0
   validates_uniqueness_of :rfid, allow_blank: true
 end
