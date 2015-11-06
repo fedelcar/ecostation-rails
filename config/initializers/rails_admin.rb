@@ -41,6 +41,7 @@ RailsAdmin.config do |config|
       scopes [:own]
     end
     edit do
+      include_all_fields
       field :company_id do
         visible false
       end
