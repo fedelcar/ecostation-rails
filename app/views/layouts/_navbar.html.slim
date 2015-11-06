@@ -18,7 +18,7 @@ nav
         = link_to 'Mis Actividades', transactions_path, class: 'navbar-link'
       li
         = link_to 'Canjear Puntos', prizes_path, class: 'navbar-link'
-      - if current_user.admin?
+      - if current_user.admin? || current_user.site_admin?
         li
           = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
       li
