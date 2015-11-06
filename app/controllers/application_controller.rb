@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :authenticate_user!, except: [:new, :sign_up]
-  before_filter :set_current_user
+  before_action :set_current_user
   include Pundit
 
   private

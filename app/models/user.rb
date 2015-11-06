@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   # to do: que sea el default en la db
   before_validation(on: :create) do
     self.bottles = 0
+    if !self.current.site_admin && self.site_admin
+      errors.add("No puede crear un usuario administrador de sitio sin serlo")
+    end
     self.title = "#{self.first_name} #{self.last_name}"
   end
 
