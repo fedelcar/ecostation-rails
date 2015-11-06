@@ -46,5 +46,6 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :email, allow_blank: false
   validates_numericality_of :bottles, greater_than_or_equal_to: 0
+  validates_numericality_of :dni, less_than_or_equal_to: 100000000
   validates_uniqueness_of :rfid, allow_blank: true
 end
