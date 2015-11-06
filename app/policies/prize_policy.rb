@@ -9,8 +9,10 @@ class PrizePolicy < ApplicationPolicy
       end
     elsif user.admin?
       case action
-        when :destroy, :edit
+        when :destroy
           false
+        when :edit, :new
+          true
         else
           super
     end

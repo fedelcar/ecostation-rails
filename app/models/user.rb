@@ -17,7 +17,6 @@ class User < ActiveRecord::Base
 
   def update_title
     self.title = "#{self.first_name} #{self.last_name}"
-    self.save
   end
 
   def self.current
@@ -29,10 +28,10 @@ class User < ActiveRecord::Base
   end
 
   def user_belongs_to_company
-    if self.company.present? and User.current.present?
+    if self.company.present? && User.current.present?
       company = self.company
       father = User.current.company
-      if father != company && !User.current.site_admin
+      if father != company && (!User.current.site_admin)
         errors.add(:company, "No puede crear un usuario para otra empresa")
       end
     end
