@@ -30,6 +30,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Station' do
+    edit do
+      include_all_fields
+      field :id do
+        visible true
+      end
+    end
+  end
+
   config.model 'Prize' do
     list do
       scopes [:own, nil]
@@ -45,6 +54,11 @@ RailsAdmin.config do |config|
       field :bottles
       field :company
       scopes [:own, nil]
+    end
+
+    show do
+      include_all_fields # all other default fields will be added after, conveniently
+      exclude_fields :reset_password_sent_at, :reset_password_token, :remember_created_at, :transactions, :trades, :title
     end
 
     edit do
