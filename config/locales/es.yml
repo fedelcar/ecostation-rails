@@ -150,8 +150,13 @@ es:
           attributes:
             bottles:
               blank: Ingrese la cantidad de botellas
+	      not_a_number: Ingrese una cantidad de botellas validas
             company:
-              blanck: Seleccione una compañía
+              blank: Seleccione una compañía
+	      name:
+		blank: Ingrese un nombre
+	      description:
+		blank: Ingrese una descripción
         transaction:
           attributes:
             time:
@@ -191,10 +196,13 @@ es:
             email:
               taken: Este email ya esta siendo utilizado
               blank: Ingrese un email
+			  invalid: Email inválido
             rfid:
               taken: Tarjeta RFID ya utilizada por otro usuario
             company:
-              blanck: Seleccione una compañía
+              blank: Seleccione una compañía
+	     password:
+		blank: Ingrese una contraseña
         company:
           attributes:
             cuit:
