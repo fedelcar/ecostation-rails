@@ -13,15 +13,15 @@ es:
       delete:
         breadcrumb: Eliminar
         done: Eliminado
-        link: "Eliminar  '%{object_label}'"
+        link: "Eliminar  %{object_label}"
         menu: Eliminar
-        title: "Eliminar %{model_label} '%{object_label}'"
+        title: "Eliminar %{model_label} %{object_label}"
       edit:
         breadcrumb: Editar
         done: Actualizado
         link: Editar este  %{model_label}
         menu: Editar
-        title: Editar %{model_label} '%{object_label}'
+        title: Editar %{model_label} %{object_label}
       export:
         breadcrumb: Exportar
         bulk_link: Exportar Seleccionados %{model_label_plural}
