@@ -21,9 +21,13 @@ class TransactionsController  < ApplicationController
       bottles = params[:bottlesCount].to_i
       Transaction.create(user: user, bottles: bottles, time: Time.zone.now,
                          station_id: params[:stationId].to_i)
-      render json: {user: user.email, bottles: user.bottles + bottles}, status: 200
+      if ! Station.find(params[:stationId].to_i).present? || Station.find(params[:stationId].to_i).company != user.company
+        render json: {error: 'Invalid User'}, status: 400
+      else
+        render json: {user: user.email, bottles: user.bottles + bottles}, status: 200
+      end
     else
-      render json: {error: 'Invalid RFID'}, status: 404
+      render json: {error: 'Invalid RFID'}, status: 400
     end
   end
 
