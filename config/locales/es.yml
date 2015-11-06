@@ -50,7 +50,7 @@ es:
       show:
         breadcrumb: "%{object_label}"
         menu: Ver
-        title: Detalles para  %{model_label} "%{object_label}"
+        title: Detalles para  %{model_label} %{object_label}
       show_in_app:
         menu: Ver en la aplicación
     export:

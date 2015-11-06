@@ -28,11 +28,22 @@ RailsAdmin.config do |config|
     list do
       scopes [:own, nil]
     end
+    edit do
+      include_all_fields
+      field :comapny_id do
+        visible false
+      end
+    end
   end
 
   config.model 'Trade' do
     list do
       scopes [:own, nil]
+    end
+    edit do
+      field :comapny_id do
+        visible false
+      end
     end
   end
 
