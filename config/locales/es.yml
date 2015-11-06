@@ -204,6 +204,8 @@ es:
               blank: Seleccione una compañía
             bottles:
               greater_than_or_equal_to: Ingrese una cantidad mayor a 0
+            password_confirmation:
+              confirmation: Ingrese su contraseña nuevamente
             password:
               blank: Ingrese una contraseña
               too_short: La contraseña debe tener 8 caracteres como mínimo
