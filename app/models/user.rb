@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
   scope :own, -> { where("company_id=?", self.current.company_id) unless self.current.site_admin }
 
   def update_title
+    if bottles < 0
+    end
+      errors.add(:bottles, "No puede ser menor a 0")
     self.title = "#{self.first_name} #{self.last_name}"
   end
 
@@ -42,6 +45,6 @@ class User < ActiveRecord::Base
   belongs_to :company
 
   validates :email, uniqueness: true, presence: true
-  validates :bottles, :numericality => { :greater_than_or_equal_than => 0 }
+  validates_numericality_of :bottles, greater_than_or_equal_to: 0
   validates_uniqueness_of :rfid, allow_blank: true
 end

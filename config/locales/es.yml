@@ -201,6 +201,8 @@ es:
               taken: Tarjeta RFID ya utilizada por otro usuario
             company:
               blank: Seleccione una compañía
+            bottles:
+              greater_than_or_equal_to: Ingrese una cantidad mayor a 0
             password:
               blank: Ingrese una contraseña
         company:
