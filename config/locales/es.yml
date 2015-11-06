@@ -151,6 +151,7 @@ es:
             bottles:
               blank: Ingrese la cantidad de botellas
               not_a_number: Ingrese una cantidad de botellas validas
+              greater_than_or_equal_to: Ingrese una cantidad mayor a 0
             company:
               blank: Seleccione una compañía
             name:
