@@ -30,6 +30,12 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Trade' do
+    list do
+      scopes [:own, nil]
+    end
+  end
+
   config.model 'Station' do
     edit do
       include_all_fields
@@ -63,7 +69,7 @@ RailsAdmin.config do |config|
 
     edit do
       include_all_fields # all other default fields will be added after, conveniently
-      exclude_fields :reset_password_sent_at, :reset_password_token, :remember_created_at, :transactions, :trades, :title
+      exclude_fields :reset_password_sent_at, :reset_password_token, :remember_created_at, :transactions, :trades, :title, :repeat_password
       field :site_admin do
         visible do
           bindings[:view]._current_user.site_admin?
