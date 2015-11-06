@@ -9,7 +9,7 @@ class Prize < ActiveRecord::Base
   scope :own, -> { where("company_id=?", User.current.company_id) unless User.current.site_admin }
   validate :user_belongs_to_company
 
-  def company_owns_station
+  def user_belongs_to_company
     if self.company.present? and User.current.present?
       company = self.company
       station = User.current.company
