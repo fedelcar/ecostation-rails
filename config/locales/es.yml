@@ -206,6 +206,7 @@ es:
               greater_than_or_equal_to: Ingrese una cantidad mayor a 0
             password:
               blank: Ingrese una contraseña
+              too_short: La contraseña debe tener 8 caracteres como mínimo
         company:
           attributes:
             cuit:
@@ -306,5 +307,4 @@ es:
   time:
     formats:
       long: "%d/%m/%Y %H:%M"
-
 
