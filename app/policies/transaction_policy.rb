@@ -4,7 +4,7 @@ class TransactionPolicy < ApplicationPolicy
       true
     elsif user.admin?
       case action
-        when :destroy, :edit
+        when :destroy, :edit, :new
           false
         else
           true
