@@ -60,9 +60,17 @@
 .trade-button {
   background-color: $light-green;
   color: $white;
+  // background-color: $white;
+  // color: $light-green;
+  height: 60px;
+  width: 150px;
   &:hover,
   &:focus {
-    color: $light-green;;
-    background-color: $white;;
+    color: $blue-5;
+    background-color: $white;
+    // color: $white;
+    // background-color: $light-green;
+    height: 70px;
+    width: 170px;    
   }
 }
