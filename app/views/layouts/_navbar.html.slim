@@ -11,8 +11,6 @@ nav
             = link_to 'Ahorro', edit_user_path(current_user), class: 'navbar-link'
           li
             = link_to 'Logros', transactions_path, class: 'navbar-link'
-          li
-            = link_to 'Canjear', prizes_path, class: 'navbar-link'
           / - if current_user.admin? || current_user.site_admin?
           /   li
           /     = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
@@ -22,5 +20,4 @@ nav
           /   = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'      
     .col-md-2.text-center
       .row
-        = fa_icon "envelope-o", class: 'email-header'
-        = label_tag nil, 'info@ecostation.com', class: 'header-label regular'
+        = button_to 'Canjear', prizes_path, class: 'btn button button-general trade-button', method: :get

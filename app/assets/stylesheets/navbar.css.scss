@@ -56,3 +56,13 @@
   color: $white;
   font-size: 48px;
 }
+
+.trade-button {
+  background-color: $light-green;
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $light-green;;
+    background-color: $white;;
+  }
+}
