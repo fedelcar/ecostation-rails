@@ -4,11 +4,6 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
 
-  def create
-    User.create(user_params)
-    binding_pry
-    redirect_to root_path
-
   def update
     current_user.update_attributes(user_params)
     redirect_to edit_user_path

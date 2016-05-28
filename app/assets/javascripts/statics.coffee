@@ -12,3 +12,4 @@ $(window).load ->
     handler.fitMapToBounds()
     return
   return
+# apikey AIzaSyA0cCyxAN3Gnm-trv35XPdipaIZLQHI_uU
