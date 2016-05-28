@@ -1,27 +1,26 @@
 nav
   .row.navbar-header.flex.no-margin
-    .col-md-3
-      = image_tag 'logo_header.png', class: 'header-logo'
-    .col-md-6.text-center
-      = label_tag nil, 'ECOSTATION', class: 'header-title'
-    .col-md-3.text-center
+    .col-md-2
+      = image_tag 'quilmes-logo.png', class: 'header-logo'
+    .col-md-8.text-center
+      .row.navbar-menu.no-margin
+        ul.nav.navbar-nav.flex.navbar-menu
+          li
+            = link_to 'Inicio', root_path, class: 'navbar-link'
+          li
+            = link_to 'Mi perfil', edit_user_path(current_user), class: 'navbar-link'
+          li
+            = link_to 'Mis Actividades', transactions_path, class: 'navbar-link'
+          li
+            = link_to 'Canjear Puntos', prizes_path, class: 'navbar-link'
+          - if current_user.admin? || current_user.site_admin?
+            li
+              = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
+          / li
+          /   = link_to 'Ayuda', '/faq', class: 'navbar-link'
+          li
+            = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'      
+    .col-md-2.text-center
       .row
         = fa_icon "envelope-o", class: 'email-header'
         = label_tag nil, 'info@ecostation.com', class: 'header-label regular'
-  .row.navbar-menu.no-margin
-    ul.nav.navbar-nav.flex.navbar-menu
-      li
-        = link_to 'Inicio', root_path, class: 'navbar-link'
-      li
-        = link_to 'Mi perfil', edit_user_path(current_user), class: 'navbar-link'
-      li
-        = link_to 'Mis Actividades', transactions_path, class: 'navbar-link'
-      li
-        = link_to 'Canjear Puntos', prizes_path, class: 'navbar-link'
-      - if current_user.admin? || current_user.site_admin?
-        li
-          = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
-      li
-        = link_to 'Ayuda', '/faq', class: 'navbar-link'
-      li
-        = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'

@@ -1,3 +1,56 @@
 // Place all the styles related to the Prizes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
+.box {
+	margin: 50px 5px 50px 5px;
+	height: 500px;
+	.box-header {
+		padding-top: 25px;
+		height: 130px;
+		margin: 0 10px 0 10px;
+		border-bottom: solid 2px $white;
+		label {
+			font-size: 32px;
+			&.white-label {
+				margin-top: 5px;
+				font-size: 16px;
+			}
+			font-weight: 100;
+		}
+		label.header {
+			color: $blue-5;
+			font-size: 30px;
+			font-weight: 300;
+		}
+	}
+}
+
+.black-box {
+	background-color: $black;
+}
+
+.white-box {
+	background-color: $white;
+}
+
+.blue-box {
+	background-color: $blue-5;
+}
+
+.title-text-bottles label {
+	color: $white;
+}
+
+.value-subtitle label {
+	color: $white;
+}
+
+.trade-them-for-subtitle {
+	font-size: 50px;
+	font-weight: 300;
+	color: $white;
+	margin-top: 40px;
+}

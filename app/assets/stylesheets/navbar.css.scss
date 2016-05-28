@@ -4,7 +4,7 @@
   margin-top: 0;
   height: 100px;
   width: 100%;
-  background-color: $light-green;
+  background-color: $blue-5;
   // background-image: url("im3.jpg");
   .header-logo {
     height: 70px;
@@ -27,12 +27,12 @@
 .navbar-menu {
   min-height: 50px;
   width: 100%;
-  background-color: $dark-grey;
+  background-color: $blue-5;
   color: $white;
 
   li>a:hover {
-    background-color: $light-green;
-    color: $white;
+    background-color: $white;
+    color: $blue-5;
   }
 }
 
@@ -46,8 +46,8 @@
   font-size: 18px;
   padding: 5px 10px;
   margin: 10px 0;
-  border-left: solid 1px $light-grey;
-  border-right: solid 1px $light-grey;
+  border-left: solid 1px $white;
+  border-right: solid 1px $white;
 }
 
 .header-title {
