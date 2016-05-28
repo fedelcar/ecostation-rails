@@ -1,0 +1,9 @@
+= form_tag(controller: 'vinti', action: 'create', method: 'post', class: 'nifty_form') do |f|
+  - unless @errors.blank?
+    #error_explanation
+      h2 = "#{pluralize(@errors.count, "error")} prohibited this payment to be done:"
+      ul
+        - @errors.each do |message|
+          li = message
+
+  .actions = f.submit
