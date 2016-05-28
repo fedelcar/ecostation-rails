@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   before_validation(on: :create) do
     self.bottles = 0
+    self.dni = 0
     self.title = "#{self.first_name} #{self.last_name}"
   end
 
@@ -17,8 +18,8 @@ class User < ActiveRecord::Base
 
   def update_title
     if bottles < 0
-    end
       errors.add(:bottles, "No puede ser menor a 0")
+    end
     self.title = "#{self.first_name} #{self.last_name}"
   end
 
