@@ -1,10 +1,29 @@
-= image_tag('Background.png', class: 'bg black-bg')
+= image_tag('Background.png', class: 'bg')
 .row
   .title-text-bottles.text-center   
     = label_tag nil, 'Ya retornaste ', class: 'bottle-title'
     = label_tag nil, '35', class: 'bottle-title-number bottle-title blue-5-label'
     = label_tag nil, ' botellas en total', class: 'bottle-title white%-label'
 
-  div style=("width:200px;height:200px;border:2px solid #5474cf") 
-    .clase-numero-ahorro style="estilo1"  100
-    .clase-texto-ahorro style="estilo2"  Kg de CO2
+  div style=("width:670px;margin:0 auto;") 
+    .cuadrado-ahorro 
+      img class='icono-pedorro' src='assets/co2-gas.png'/
+      .clase-numero-ahorro style="estilo1"  100
+      .clase-texto-ahorro style="estilo2"  Kg de CO2
+    .cuadrado-ahorro-2 
+      img class='icono-pedorro' src='assets/garbage.png'/
+      .clase-numero-ahorro style="estilo1"  472
+      .clase-texto-ahorro style="estilo2"  Kg de Basura  
+    .cuadrado-ahorro-3
+      img class='icono-pedorro' src='assets/bright-lightbulb.png'/
+      .clase-numero-ahorro style="estilo1"  100
+      .clase-texto-ahorro style="estilo2"  Horas de Lampara 50w prendida 
+    .cuadrado-ahorro 
+      .clase-numero-ahorro style="estilo1"  78
+      .clase-texto-ahorro style="estilo2"  Lts de Agua  
+    .cuadrado-ahorro-2 
+      .clase-numero-ahorro style="estilo1"  472
+      .clase-texto-ahorro style="estilo2"  Kg de Basura  
+    .cuadrado-ahorro-3
+      .clase-numero-ahorro style="estilo1"  100
+      .clase-texto-ahorro style="estilo2"  Horas de Lampara 50w prendida 
