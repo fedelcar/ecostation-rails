@@ -4,6 +4,7 @@ class VintiController < ApplicationController
 
   def index
     @vinti = nil
+    @money = 50
   end
 
   def create
@@ -31,6 +32,7 @@ class VintiController < ApplicationController
       redirect_to :payments_vinti
     else
       flash[:notice] = "Se le ha acreditado $#{current_user.bottles_in_money} a la cuenta #{vinti_user}."
+      # restar botellas
       redirect_to :root
     end
   end
