@@ -1,8 +1,8 @@
 - if current_user.present?
   = image_tag('im3.jpg', class: 'bg')
-  .container-fluid.margin-top.col-md-offset-2.col-md-8.container.text-center
+  .container-fluid.margin-top.col-md-offset-2.col-md-8.container.text-center.clear
     - if @stations.present?
-      = label_tag nil, 'Acercate a tu EcoStation más cercana!', class: 'table-header'
+      = label_tag nil, 'Acercate a tu EcoStation más cercana!', class: 'table-header margin-bottom'
       - @stations.each.with_index do |station, i|
       script
         = "var Eco = {}; Eco.markers = #{@gMapsHash.to_json};".html_safe;
