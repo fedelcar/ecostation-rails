@@ -62,3 +62,26 @@
 	margin-right: -15px;
 	margin-top: -45px;
 }
+
+.circle {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	border: solid 2px $blue-11;
+	img {
+		margin-top: 16%;
+		margin-left: 16%;
+		height: 65px;
+	}
+}
+
+.blue-11-label {
+	color: $blue-11;
+}
+
+.pad-150 {
+	padding-top: 150px;
+}
+.top-50 {
+	margin-top: 50px;
+}
