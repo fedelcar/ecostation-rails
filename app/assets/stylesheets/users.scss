@@ -51,3 +51,29 @@ img.bg {
 .upload-button {
   margin-bottom: 30px;
 }
+
+.my-quilmes {
+  height: 600px;
+  padding: 10px;
+  img.beer {
+    height: 400px;
+    margin-top: 100px;
+  }
+  .meter {
+    position: absolute;
+    top: 280px;
+    left: -14px;
+    height: 50px;
+    width: 100px;
+    background-color: $blue-5;
+    label {
+      font-size: 30px;
+      line-height: 50px;
+      color: $white;
+    }
+  }
+}
+
+.space-50 {
+  height: 50px;
+}

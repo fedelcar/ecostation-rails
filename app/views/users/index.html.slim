@@ -1,6 +1,13 @@
 = image_tag('Background.png', class: 'bg')
+.row.my-quilmes
+  .col-md-offset-3.col-md-6
+    .col-md-1
+      .meter.text-center
+        = label_tag nil, "50%", class:'meter-label'
+    .col-md-11
+      = image_tag('chopp.png', class: 'beer')
 .row
-  div style=("width:670px;margin:0 auto;") 
+  div style=("width:790px;margin:0 auto;") 
     .cuadrado-ahorro.purple-border
       img class='icono-pedorro' src='assets/co2-gas.png'/
       .clase-numero-ahorro style="estilo1" 
@@ -37,3 +44,4 @@
         .green-10-label
           = @bottles * 3
       .clase-texto-ahorro style="estilo2"  Koalas Salvados 
+.row.space-50
