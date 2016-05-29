@@ -1,0 +1,23 @@
+.container-fluid
+	.row.text-center
+		= label_tag nil, "Elegí alguno de estos productos", class: "blue-5-label h1 top-20"
+	.row.top-20
+		.bordera.text-center
+			= link_to image_tag("chopera.png"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+			br
+			= label_tag nil, "Chopera", class: "blue-5-label h4"
+		.bordera.text-center
+			= link_to image_tag("iman.jpg"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+			br
+			= label_tag nil, "Iman Destapador", class: "blue-5-label h4"
+		.bordera.text-center
+			= link_to image_tag("frapera.jpg"), {action: 'index', controller: 'vinti'}, class: 'pay-link frape'
+			= label_tag nil, "Frapera", class: "blue-5-label h4"
+	.row.space-top.padding-18
+		.bordera.text-center
+			= link_to image_tag("paraguas.jpg"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+			= label_tag nil, "Paraguas", class: "blue-5-label h4"
+		.bordera.text-center
+			= link_to image_tag("vasos.jpg"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+			= label_tag nil, "Juego de 6 vasos", class: "blue-5-label h4"
+

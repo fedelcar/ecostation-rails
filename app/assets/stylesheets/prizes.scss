@@ -98,3 +98,21 @@
 		width: 145px;		
 	}
 }
+
+.my-modal {
+	width: 1000px !important;
+}
+
+.bordera {
+	float: left;
+	margin: 10px 10px;
+	// border: solid 1px $blue-5;
+	width: 30%;
+	height: 200px;
+	.frape img{
+		width: 62%;
+	}
+	img {
+		height: 75%;
+	}
+}

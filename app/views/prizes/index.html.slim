@@ -11,7 +11,7 @@
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
-		          	= "$#{(@bottles * 4).round}"
+		          	= "$#{(@discount_value).round}"
       			.clase-texto-ahorro style="estilo2"  Para retirar en efectivo
 		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#payments"
 		    	| Canjear
@@ -33,7 +33,7 @@
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
 		          	= "$#{(@bottles * 7 * 1.1).round}"
-      			.clase-texto-ahorro style="estilo2"  Para canjear en productos exclusivos de Quilmes
+      			.clase-texto-ahorro style="estilo2"  Productos Quilmes para tu hogar.
 		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#prizes"
 		    	| Canjear
 
@@ -42,12 +42,12 @@
     .modal-content
       = render partial: 'prizes/payment_modal'
 
-.modal.fade#payments tabindex="-1" role="dialog" aria-labelledby="markets"
+.modal.fade#markets tabindex="-1" role="dialog" aria-labelledby="markets"
   .modal-dialog role='document'
     .modal-content
       = render partial: 'prizes/market_modal'
 
-.modal.fade#payments tabindex="-1" role="dialog" aria-labelledby="prizes"
-  .modal-dialog role='document'
+.modal.fade#prizes tabindex="-1" role="dialog" aria-labelledby="prizes"
+  .modal-dialog.my-modal role='document'
     .modal-content
       = render partial: 'prizes/prizes_modal'

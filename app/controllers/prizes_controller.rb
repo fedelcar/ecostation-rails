@@ -3,7 +3,7 @@ class PrizesController  < ApplicationController
   def index
     @bottles = current_user.bottles
     @value = current_user.bottles * 7
-    @discount_value = (@value * 0.5).round
+    @discount_value = current_user.bottles_in_money.round
     @bottles_value = (@value * 1.15).round
     if current_user.company.present?
       @prizes = current_user.company.prizes.order(bottles: :asc)
