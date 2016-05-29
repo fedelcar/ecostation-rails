@@ -6,8 +6,11 @@
         = label_tag nil, "50%", class:'meter-label'
     .col-md-11
       = image_tag('chopp.png', class: 'beer')
+
+.title-text-bottles.text-center   
+  = label_tag nil, 'Ya ahorraste', class: 'bottle-title blue-5-label'      
 .row
-  div style=("width:790px;margin:0 auto;") 
+  div style=("width:725px;margin:0 auto;") 
     .cuadrado-ahorro.purple-border
       img class='icono-pedorro' src='assets/co2-gas.png'/
       .clase-numero-ahorro style="estilo1" 
@@ -19,7 +22,7 @@
       .clase-numero-ahorro style="estilo1 green-label"
         .green-10-label
           = "$#{@bottles * 7}"
-      .clase-texto-ahorro style="estilo2"  Dinero Ahorrado 
+      .clase-texto-ahorro style="estilo2"  Pesos 
     .cuadrado-ahorro.red-border
       img class='icono-pedorro' src='assets/garbage.png'/
       .clase-numero-ahorro style="estilo1 red-label" 
