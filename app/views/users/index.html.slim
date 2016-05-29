@@ -6,14 +6,14 @@
 .row.my-quilmes
   .col-md-offset-2.col-md-8
     .col-md-1
-      .meter.text-center[style="top: #{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 - 25 : -25}px"]
-        = label_tag nil, "#{@bottles <= 50 ? @bottles * 100 / 50 : 100}%", class:'meter-label'
-      .meter-bar[style="top: #{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 - 1 : -1}px"]
+      .meter.text-center[style="top: #{@bottles <= 20 ? (100 - @bottles * 100 / 20) * 4 - 25 : -25}px"]
+        = label_tag nil, "#{@bottles <= 20 ? @bottles * 100 / 20 : 100}%", class:'meter-label'
+      .meter-bar[style="top: #{@bottles <= 20 ? (100 - @bottles * 100 / 20) * 4 - 1 : -1}px"]
     .col-md-11 
       .chopp-grey
         = image_tag('chopp.png', class: 'beer')
-      .chopp-color[style="height: #{@bottles <= 50 ? (@bottles * 100 / 50) * 4 : 400}px; top: #{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 : 0}px;"]
-        = image_tag('chopp.png', class: 'beer', style: "top: -#{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 : 0}px;")
+      .chopp-color[style="height: #{@bottles <= 20 ? (@bottles * 100 / 20) * 4 : 400}px; top: #{@bottles <= 20 ? (100 - @bottles * 100 / 20) * 4 : 0}px;"]
+        = image_tag('chopp.png', class: 'beer', style: "top: -#{@bottles <= 20 ? (100 - @bottles * 100 / 20) * 4 : 0}px;")
       / div
       /   .title-text-bottles style='width:350px;margin-top: 250px;float:left;text-align:center'
       /     = label_tag nil, 'Te faltan ', class: 'texto-home-recompensa' 
@@ -29,7 +29,7 @@
       img class='icono-pedorro' src='assets/co2-gas.png'/
       .clase-numero-ahorro style="estilo1" 
         .purple-label
-          = @bottles * 0.1
+          = (@bottles * 0.1).round(2)
       .clase-texto-ahorro style="estilo2"  Kg de CO2
     .cuadrado-ahorro.green-border
       img class='icono-pedorro' src='assets/coin.png'/
