@@ -1,17 +1,38 @@
 = image_tag('Background.png', class: 'bg')
 .row
 	.title-text-bottles.text-center		
-		= image_tag 'bottle-blue.png', class: 'beer-logo-2'
-	    = label_tag nil, @bottles, class: 'bottle-title-number bottle-title blue-5-label'
+	    = label_tag nil, @bottles, class: 'bottle-title-number bottle-title blue-11-label'
 	    = label_tag nil, ' botellas acumuladas', class: 'bottle-title blue-5-label'
 .row
-	.col-md-offset-2.col-md-8
-		.col-md-4.flex
-			.circle
-				= image_tag 'bag.png', class: 'center-image'	
-		.col-md-4.flex
-			.circle
+	.col-md-offset-2.col-md-8 style='margin-top:30px;'
+		.col-md-4
+			.circle style="margin:0 auto;"
+				= image_tag 'bag.png', class: 'center-image'
+		    .cuadrado-ahorro-canjear
+		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
+		        	.green-10-label
+		          	= "$#{@bottles * 4}"
+      			.clase-texto-ahorro style="estilo2"  Para retirar en distintos medios
+      		br	
+		    = button_to 'Canjear', prizes_path, class: 'boton-canjear btn button button-general trade-button', method: :get
+
+
+		.col-md-4
+			.circle style="margin:0 auto;"
 				= image_tag 'beer-crate.png', class: 'center-image'
-		.col-md-4.flex
-			.circle
+		    .cuadrado-ahorro-canjear
+		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
+		        	.green-10-label
+		          	= "$#{@bottles * 7 * 1.1}"
+      			.clase-texto-ahorro style="estilo2"  Para canjear el productos Quilmes
+		   	= button_to 'Canjear', prizes_path, class: 'boton-canjear btn button button-general trade-button', method: :get
+		.col-md-4
+			.circle style="margin:0 auto;"
 				= image_tag 'gift.png', class: 'center-image'
+		    .cuadrado-ahorro-canjear
+		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
+		        	.green-10-label
+		          	= "$#{@bottles * 7 * 1.1}"
+      			.clase-texto-ahorro style="estilo2"  Para canjear en premios exclusivos de Quilmes
+		    = button_to 'Canjear', prizes_path, class: 'boton-canjear btn button button-general trade-button', method: :get      			
+
