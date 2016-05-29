@@ -1,0 +1,11 @@
+.container-fluid
+	.row.text-center
+		= label_tag nil, "Elegí cualquier de estos medios de pago para retirar tu dinero", class: "blue-5-label h1"
+	.row.top-50
+		= link_to image_tag("vinti.png"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+		= link_to image_tag("paypal.png"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+		= link_to image_tag("mercadopago.png"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+	.row.space-top
+		= link_to image_tag("sube.png"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+		= link_to image_tag("recarga.png"), {action: 'index', controller: 'vinti'}, class: 'pay-link'
+

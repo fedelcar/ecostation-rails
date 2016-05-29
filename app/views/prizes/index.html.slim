@@ -11,11 +11,10 @@
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
-		          	= "$#{@bottles * 4}"
-      			.clase-texto-ahorro style="estilo2"  Para retirar en distintos medios
-      		br	
-		    = button_to 'Canjear', prizes_path, class: 'boton-canjear btn button button-general trade-button', method: :get
-
+		          	= "$#{(@bottles * 4).round}"
+      			.clase-texto-ahorro style="estilo2"  Para retirar en efectivo
+		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#payments"
+		    	| Canjear
 
 		.col-md-4
 			.circle style="margin:0 auto;"
@@ -23,16 +22,32 @@
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
-		          	= "$#{@bottles * 7 * 1.1}"
-      			.clase-texto-ahorro style="estilo2"  Para canjear el productos Quilmes
-		   	= button_to 'Canjear', prizes_path, class: 'boton-canjear btn button button-general trade-button', method: :get
+		          	= "$#{(@bottles * 7 * 1.1).round}"
+      			.clase-texto-ahorro style="estilo2"  Para canjear en cerveza Quilmes
+		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#markets"
+		    	| Canjear
 		.col-md-4
 			.circle style="margin:0 auto;"
 				= image_tag 'gift.png', class: 'center-image'
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
-		          	= "$#{@bottles * 7 * 1.1}"
-      			.clase-texto-ahorro style="estilo2"  Para canjear en premios exclusivos de Quilmes
-		    = button_to 'Canjear', prizes_path, class: 'boton-canjear btn button button-general trade-button', method: :get      			
+		          	= "$#{(@bottles * 7 * 1.1).round}"
+      			.clase-texto-ahorro style="estilo2"  Para canjear en productos exclusivos de Quilmes
+		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#prizes"
+		    	| Canjear
 
+.modal.fade#payments tabindex="-1" role="dialog" aria-labelledby="payments"
+  .modal-dialog role='document'
+    .modal-content
+      = render partial: 'prizes/payment_modal'
+
+.modal.fade#payments tabindex="-1" role="dialog" aria-labelledby="markets"
+  .modal-dialog role='document'
+    .modal-content
+      = render partial: 'prizes/market_modal'
+
+.modal.fade#payments tabindex="-1" role="dialog" aria-labelledby="prizes"
+  .modal-dialog role='document'
+    .modal-content
+      = render partial: 'prizes/prizes_modal'
