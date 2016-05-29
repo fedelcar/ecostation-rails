@@ -14,8 +14,9 @@ nav
           / - if current_user.admin? || current_user.site_admin?
           /   li
           /     = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
-          / li
-          /   = link_to 'Ayuda', '/faq', class: 'navbar-link'
+          li.flex
+            = image_tag 'bottle.png', class: 'beer-logo'
+            = label_tag nil, @bottles, class: 'bottle-count white-label'
           / li
           /   = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'      
     .col-md-2.text-center
