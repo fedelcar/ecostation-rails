@@ -1,7 +1,6 @@
 @import 'colors';
 
 .bottle-title {
-  margin-top: 10px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: $dark-grey;
@@ -12,7 +11,7 @@
 .bottle-title-number {
   color: $blue-5;
   padding: 0 8px;
-  font-size: 80px;
+  font-size: 40px !important;
 }
 
 .container {
@@ -36,6 +35,7 @@
 }
 
 .map-container, #map {
+  margin-top: 15px;
   width: 100%;
   height: 500px;
   margin-bottom: 100px;

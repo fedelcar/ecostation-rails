@@ -10,7 +10,8 @@ nav
           li
             = link_to 'Estaciones Cercanas', root_path, class: 'navbar-link'
     .col-md-2.text-center
-      .row.trade-section
-        = image_tag 'bottle.png', class: 'beer-logo'
-        = label_tag nil, @bottles, class: 'bottle-count white-label'
+      / .row.trade-section
+      .row
+        / = image_tag 'bottle.png', class: 'beer-logo'
+        / = label_tag nil, @bottles, class: 'bottle-count white-label'
         = button_to 'Canjear', prizes_path, class: 'btn button button-general trade-button', method: :get

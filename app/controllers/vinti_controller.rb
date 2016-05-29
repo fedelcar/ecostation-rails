@@ -14,11 +14,13 @@ class VintiController < ApplicationController
     if vinti_user.blank?
       flash[:error] = 'Completá el nombre de usuario sin arrobas'
       redirect_to :payments_vinti
+      return
     end
 
     if current_user.bottles_in_money.to_i == 0
       flash[:error] = 'No tienes saldo! Andá a reciclar'
       redirect_to :payments_vinti
+      return
     end
 
     money = current_user.bottles_in_money
@@ -30,10 +32,12 @@ class VintiController < ApplicationController
     if result.is_a? String
       flash[:error] = result
       redirect_to :payments_vinti
+      return
     else
       flash[:notice] = "Se le ha acreditado $#{current_user.bottles_in_money} a la cuenta #{vinti_user}."
       current_user.update_attributes(bottles: 0)
       redirect_to :root
+      return
     end
   end
 

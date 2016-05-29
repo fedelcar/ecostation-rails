@@ -1,13 +1,18 @@
 @import 'colors';
 
+.navbar {
+  
+}
+
 .navbar-header {
   margin-top: 0;
+  margin-bottom: 20px;
   height: 100px;
   width: 100%;
   background-color: $blue-5;
   // background-image: url("im3.jpg");
   .header-logo {
-    height: 70px;
+    height: 60px;
     margin-left: 20px;
   }
 
@@ -82,8 +87,7 @@
   border-radius: 5px;
   &:hover,
   &:focus {
-    color: $blue-5;
-    background-color: $white;
+    background-color: $lighter-green;
   }
 }
 

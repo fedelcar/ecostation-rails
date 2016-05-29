@@ -1,4 +1,8 @@
 = image_tag('Background.png', class: 'bg')
+.row
+  .title-text-bottles.text-center   
+      = label_tag nil, @bottles, class: 'bottle-title-number bottle-title blue-11-label'
+      = label_tag nil, ' botellas acumuladas', class: 'bottle-title blue-5-label'
 .row.my-quilmes
   .col-md-offset-3.col-md-6
     .col-md-1
@@ -10,7 +14,7 @@
 .title-text-bottles.text-center   
   = label_tag nil, 'Ya ahorraste', class: 'bottle-title blue-5-label'      
 .row
-  div style=("width:725px;margin:0 auto;") 
+  div style=("width:600px;margin:0 auto;") 
     .cuadrado-ahorro.purple-border
       img class='icono-pedorro' src='assets/co2-gas.png'/
       .clase-numero-ahorro style="estilo1" 

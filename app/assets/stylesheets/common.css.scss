@@ -222,7 +222,8 @@ input[type=radio] {
   font-weight: 400;
   border: solid 2px $blue-5;
   color: $blue-5;
-  background-color: $grey-1;
+  background-color: $white;
+  margin-top: 5px;
   border-radius: 0;
 }
 
@@ -367,6 +368,14 @@ input[type=radio] {
   color: $grey-3;
 }
 
+.top-20 {
+  margin-top: 25px;
+}
+
+.padding-18 {
+  padding-left: 18%;
+}
+
 .input-group input.date-input.start-date-input {
   border-right: solid 2px $grey-2;
 }
@@ -426,6 +435,16 @@ input[type=radio] {
 }
 .no-padding {
   padding: 0;
+}
+
+.vinti-button {
+  &:hover {
+    background-color: $blue-4;
+  }
+}
+
+.retirar-dineros {
+  margin-top: -50px; 
 }
 
 .no-margin {
@@ -508,10 +527,10 @@ body {
 
 .clase-numero-ahorro{
   text-align:center;
-    font-family:Helvetica Neue;
-  font-size:100px;
+  font-family:Helvetica Neue;
+  font-size:30px;
   color:#848C97;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .clase-texto-ahorro{
@@ -520,7 +539,7 @@ body {
   height: 40px;
   font-size:16px;
   color:#848C97;
-  margin: 45px 5px 0 5px;
+  margin: 35px 5px 0 5px;
 }
 
 .clase-texto-ahorro-canjear{
@@ -534,13 +553,14 @@ body {
 .clase-numero-ahorro-canjear{
   text-align:center;
     font-family:Helvetica Neue;
-  font-size:70px;
+  font-size:40px;
   color:$light-green;
-  margin-top: 40px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 .cuadrado-ahorro {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin: 20px 20px;
   float: left;
   background-color: white;
@@ -569,10 +589,9 @@ body {
   border:1px solid $purple-1;
 }
 
-
 .icono-pedorro{
-  margin:6px;
-  height: 32px;
+  margin: 6px;
+  height: 45px;
 }
 
 .transparent {
@@ -589,8 +608,13 @@ body {
     }}
 }
 
+.margin-20 {
+  margin-top: -20px;
+}
+
 .boton-canjear{
-  margin: 17px 0 0 50px;
+  margin: 17px 0 0 20%;
+  width: 60% !important;
 }
 .full {
   width: 100%;

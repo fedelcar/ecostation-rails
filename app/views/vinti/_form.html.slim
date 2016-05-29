@@ -3,7 +3,7 @@
   .form-basic.transparent
     .row.no-margin
       .col-md-12.sign-up-form.transparent
-        .section-title.text-center
+        .section-title.text-center.retirar-dineros.bottle-title.blue-5-label
           = label_tag nil, 'Retirar tu dinero'
         .row
           = image_tag "vinti.png", class: 'vinti-img'
@@ -16,4 +16,4 @@
           .text-left
             = label_tag nil, "Se acreditarán $#{@money}", class: 'form-label login-label green-label text-left'
           div.text-center
-            .actions = submit_tag 'Retirar', class: 'btn button-general green-button submit-button full'
+            .actions = submit_tag 'Retirar', class: 'btn button-general green-button submit-button full vinti-button'
