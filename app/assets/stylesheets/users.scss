@@ -65,14 +65,40 @@ img.bg {
     height: 50px;
     width: 100px;
     background-color: $blue-5;
+    z-index: 2;
     label {
       font-size: 30px;
       line-height: 50px;
       color: $white;
     }
   }
+
+  .meter-bar {
+    width: 400px;
+    height: 1px;
+    background: $blue-5;
+    z-index: 1;
+    position: absolute;
+  }
 }
 
 .space-50 {
   height: 50px;
+}
+
+.chopp-grey {
+  position: absolute;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.chopp-color {
+  position: absolute;
+  display: inline;
+  clear: none;
+  overflow: hidden;
+  width: 345px;
+
+  img {
+    position: absolute;
+  }
 }

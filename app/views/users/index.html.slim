@@ -6,10 +6,14 @@
 .row.my-quilmes
   .col-md-offset-2.col-md-8
     .col-md-1
-      .meter.text-center
-        = label_tag nil, "#{@bottles * 100 / 4}%", class:'meter-label'
+      .meter.text-center[style="top: #{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 - 25 : -25}px"]
+        = label_tag nil, "#{@bottles <= 50 ? @bottles * 100 / 50 : 100}%", class:'meter-label'
+      .meter-bar[style="top: #{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 - 1 : -1}px"]
     .col-md-11 
-      = image_tag('chopp.png', class: 'beer')
+      .chopp-grey
+        = image_tag('chopp.png', class: 'beer')
+      .chopp-color[style="height: #{@bottles <= 50 ? (@bottles * 100 / 50) * 4 : 400}px; top: #{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 : 0}px;"]
+        = image_tag('chopp.png', class: 'beer', style: "top: -#{@bottles <= 50 ? (100 - @bottles * 100 / 50) * 4 : 0}px;")
       / div
       /   .title-text-bottles style='width:350px;margin-top: 250px;float:left;text-align:center'
       /     = label_tag nil, 'Te faltan ', class: 'texto-home-recompensa' 
