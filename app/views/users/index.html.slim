@@ -1,19 +1,10 @@
-h1 Listing users
+= image_tag('Background.png', class: 'bg black-bg')
+.row
+  .title-text-bottles.text-center   
+    = label_tag nil, 'Ya retornaste ', class: 'bottle-title'
+    = label_tag nil, '35', class: 'bottle-title-number bottle-title blue-5-label'
+    = label_tag nil, ' botellas en total', class: 'bottle-title white%-label'
 
-table
-  thead
-    tr
-      th
-      th
-      th
-
-  tbody
-    - @users.each do |user|
-      tr
-        td = link_to 'Show', user
-        td = link_to 'Edit', edit_user_path(user)
-        td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New User', new_user_path
+  div style=("width:200px;height:200px;border:2px solid #5474cf") 
+    .clase-numero-ahorro style="estilo1"  100
+    .clase-texto-ahorro style="estilo2"  Kg de CO2
