@@ -23,8 +23,8 @@ Ecostation::Application.routes.draw do
   post 'payments/voucher' => 'vouchers#new'
   get 'payments/voucher/:id' => 'vouchers#show', :as => :show_voucher
  
-  get 'faq', to: 'statics#faq'
-  root to: 'statics#home'
+  get 'map', to: 'statics#home'
+  root to: 'users#index'
 
   require 'sidekiq/web'
   mount Sidekiq::Web, at: 'sidekiq'
