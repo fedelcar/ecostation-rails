@@ -79,9 +79,22 @@
   color: $white;
   height: 60px;
   width: 150px;
+  border-radius: 5px;
   &:hover,
   &:focus {
     color: $blue-5;
     background-color: $white;
+  }
+}
+
+.trade-button-2 {
+  background-color: $light-green;
+  color: $white;
+  height: 60px;
+  width: 150px;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    background-color: $blue-5;
   }
 }
