@@ -553,3 +553,12 @@ body {
   margin:6px;
   height: 32px;
 }
+
+.menu-arreglado-villa{
+  font-size:17px;
+  li {
+    a{
+    border-left:none !important;
+    border-right:none !important;
+    }}
+}
