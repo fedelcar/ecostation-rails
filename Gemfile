@@ -36,6 +36,7 @@ gem 'simple_form'
 gem 'turbolinks'
 
 gem 'jquery-turbolinks'
+gem 'httparty'
 
 gem 'devise'
 gem 'devise-i18n'

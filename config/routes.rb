@@ -14,6 +14,10 @@ Ecostation::Application.routes.draw do
       post :ecostation
     end
   end
+
+    get 'payments/vinti' => 'vinti#index'
+    post 'payments/vinti' => 'vinti#create'
+ 
   get 'faq', to: 'statics#faq'
   root to: 'statics#home'
 
