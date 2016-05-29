@@ -8,5 +8,8 @@ p.help-block {
 }
 
 .alert-success{
-  display: none !important;
 }
+
+.alert.fade.in.alert-success {
+    display: block !important;
+} 

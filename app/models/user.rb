@@ -31,6 +31,10 @@ class User < ActiveRecord::Base
     Thread.current[:user] = user
   end
 
+  def bottles_in_money
+    self.bottles * 3.5
+  end
+
   def user_belongs_to_company
     if self.company.present? && User.current.present?
       company = self.company

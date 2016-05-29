@@ -1,4 +1,4 @@
-= form_tag(controller: 'vinti', action: 'create', method: 'post', class: 'nifty_form') do |f|
+= form_tag(controller: 'vinti', action: 'create') do
   - unless @errors.blank?
     #error_explanation
       h2 = "#{pluralize(@errors.count, "error")} prohibited this payment to be done:"
@@ -6,4 +6,7 @@
         - @errors.each do |message|
           li = message
 
-  .actions = f.submit
+  = label_tag(:user, "Usuario de vinti")
+  = text_field_tag(:user)
+
+  .actions = submit_tag 'Retirar'
