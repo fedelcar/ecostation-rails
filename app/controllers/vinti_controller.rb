@@ -36,7 +36,7 @@ class VintiController < ApplicationController
     else
       flash[:notice] = "Se le ha acreditado $#{current_user.bottles_in_money} a la cuenta #{vinti_user}."
       current_user.update_attributes(bottles: 0)
-      redirect_to :prizes_path
+      redirect_to :prizes
       return
     end
   end
