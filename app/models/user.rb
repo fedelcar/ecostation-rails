@@ -35,6 +35,10 @@ class User < ActiveRecord::Base
     self.bottles * 3.5
   end
 
+  def bottles_in_voucher
+    self.bottles * 7.7
+  end
+
   def user_belongs_to_company
     if self.company.present? && User.current.present?
       company = self.company
@@ -46,6 +50,7 @@ class User < ActiveRecord::Base
   end
 
   has_many :transactions
+  has_many :vouchers
   has_many :trades
   belongs_to :company
 

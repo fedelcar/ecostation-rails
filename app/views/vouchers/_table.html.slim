@@ -1,0 +1,14 @@
+.row
+  .col-md-10.col-md-offset-1
+    table.table-bordered.table-hover.table-striped.table.index-table
+      thead
+        tr
+          th.text-center Codigo
+          th.text-center Dia generado
+          th.text-center Total
+      tbody
+        - @vouchers.each do |voucher|
+          tr
+            td.text-center = voucher.code
+            td.text-center = voucher.created_at
+            td.text-center = voucher.total

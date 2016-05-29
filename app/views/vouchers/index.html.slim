@@ -1,0 +1,6 @@
+= image_tag('Background.png', class: 'bg')
+.row.margin-20
+	- if @vouchers.blank?
+        p "No cuenta con vouchers aun. Una vez creados los vouchers, se logeará de aca"
+    - else
+        render '_table.html.slims'

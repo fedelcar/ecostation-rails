@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106011200) do
+ActiveRecord::Schema.define(version: 20160529101050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,5 +89,15 @@ ActiveRecord::Schema.define(version: 20151106011200) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+
+  create_table "vouchers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "consumed_at"
+    t.boolean  "consumed"
+    t.string   "code"
+    t.integer  "bottles"
+    t.float    "total"
+  end
 
 end

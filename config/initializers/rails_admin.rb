@@ -63,6 +63,12 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'Vouchers' do
+    list do
+      scopes [:own]
+    end
+  end
+
   config.model 'User' do
     list do
       field :first_name
