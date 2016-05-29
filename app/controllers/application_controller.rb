@@ -8,7 +8,9 @@ class ApplicationController < ActionController::Base
 
   def set_current_user
     User.current = current_user
-    @bottles = current_user.bottles
+    if current_user.present?
+      @bottles = current_user.bottles
+    end
   end
 
   def after_sign_up_path_for(_resource)
