@@ -24,7 +24,7 @@
   }
 
   .beer-logo {
-    margin-left: 30px;
+    margin-left: -70px;
     margin-top: -30px;
     height: 60px;
   }
@@ -33,6 +33,7 @@
     font-size: 50px;
     color: $white;
     line-height: 50px;
+    margin-right: 30px;
   }
 }
 
@@ -69,20 +70,18 @@
   font-size: 48px;
 }
 
+.trade-section {
+  display: -webkit-box;
+}
+
 .trade-button {
   background-color: $light-green;
   color: $white;
-  // background-color: $white;
-  // color: $light-green;
   height: 60px;
   width: 150px;
   &:hover,
   &:focus {
     color: $blue-5;
     background-color: $white;
-    // color: $white;
-    // background-color: $light-green;
-    height: 70px;
-    width: 170px;    
   }
 }

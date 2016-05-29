@@ -6,19 +6,11 @@ nav
       .row.navbar-menu.no-margin
         ul.nav.navbar-nav.flex.navbar-menu
           li
+            = link_to 'Mi Quilmes', edit_user_path(current_user), class: 'navbar-link'
+          li
             = link_to 'Estaciones Cercanas', root_path, class: 'navbar-link'
-          li
-            = link_to 'Ahorro', edit_user_path(current_user), class: 'navbar-link'
-          li
-            = link_to 'Logros', transactions_path, class: 'navbar-link'
-          / - if current_user.admin? || current_user.site_admin?
-          /   li
-          /     = link_to 'Administracion', rails_admin_path, class: 'navbar-link'
-          li.flex
-            = image_tag 'bottle.png', class: 'beer-logo'
-            = label_tag nil, @bottles, class: 'bottle-count white-label'
-          / li
-          /   = link_to 'Salir', destroy_user_session_path, method: 'delete', class: 'navbar-link'      
     .col-md-2.text-center
-      .row
+      .row.trade-section
+        = image_tag 'bottle.png', class: 'beer-logo'
+        = label_tag nil, @bottles, class: 'bottle-count white-label'
         = button_to 'Canjear', prizes_path, class: 'btn button button-general trade-button', method: :get
