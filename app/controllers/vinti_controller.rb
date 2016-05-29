@@ -4,13 +4,13 @@ class VintiController < ApplicationController
 
   def index
     @vinti = nil
-    @money = 50
+    @money = current_user.bottles_in_money
   end
 
   def create
     vinti_user = params[:user]
-    vinti_user.chomp!('')
-    vinti_user.chomp!('@')
+    # vinti_user.chomp!('')
+    # vinti_user.chomp!('@')
     if vinti_user.blank?
       flash[:error] = 'Completá el nombre de usuario sin arrobas'
       redirect_to :payments_vinti

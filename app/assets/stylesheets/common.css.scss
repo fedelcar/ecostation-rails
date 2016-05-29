@@ -220,10 +220,9 @@ input[type=radio] {
 .form-input {
   font-size: 18px;
   font-weight: 400;
-  border: solid 2px $grey-2;
+  border: solid 2px $blue-5;
   color: $blue-5;
   background-color: $grey-1;
-  border: solid 2px $grey-2;
   border-radius: 0;
 }
 
@@ -349,6 +348,10 @@ input[type=radio] {
 
 .half-width {
   width: 50%;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .input-group input.date-input {
@@ -571,6 +574,11 @@ body {
   height: 32px;
 }
 
+.transparent {
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
 .menu-arreglado-villa{
   font-size:17px;
   li {
@@ -582,4 +590,7 @@ body {
 
 .boton-canjear{
   margin: 17px 0 0 50px;
+}
+.full {
+  width: 100%;
 }
