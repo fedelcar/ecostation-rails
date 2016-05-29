@@ -1,25 +1,10 @@
 - if current_user.present?
   = image_tag('im3.jpg', class: 'bg')
   .container-fluid.margin-top.col-md-offset-2.col-md-8.container.text-center
-    = label_tag nil, 'Actualmente tenés ', class: 'bottle-title'
-    = label_tag nil, @bottles, class: 'bottle-title-number bottle-title'
-    = label_tag nil, ' botellas acumuladas', class: 'bottle-title'
-    = label_tag nil, 'Acercate a tu EcoStation más cercana!', class: 'table-header'
     - if @stations.present?
+      = label_tag nil, 'Acercate a tu EcoStation más cercana!', class: 'table-header'
       - @stations.each.with_index do |station, i|
-        .coords
-          - if station.positions.present?
-            = hidden_field_tag("lat", station.positions.last.lat, id: "lat")
-            = hidden_field_tag("lng", station.positions.last.lng, id: "lng")
+      script
+        = "var Eco = {}; Eco.markers = #{@gMapsHash.to_json};".html_safe;
       .map-container
         #map
-    - if !@transactions.count.zero?
-      .margin-top
-        = label_tag nil, 'Últimas Transacciones', class: 'table-header'
-        = render partial: 'transactions/table', locals: { transactions: @transactions }
-        - if !@trades.count.zero?
-          .margin-top
-            =label_tag nil, 'Premios Canjeados', class: 'table-header'
-            = render partial: 'trades/table', locals: { trades: @trades }
-        - else
-          h2 Aún no has canjeado premios. #{link_to 'Hacelo acá', prizes_path}

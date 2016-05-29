@@ -40,8 +40,11 @@
 	background-color: $blue-5;
 }
 
-.title-text-bottles label {
-	color: $white;
+.title-text-bottles {
+	margin-top: 125px;
+	label {
+		color: $white;
+	}
 }
 
 .value-subtitle label {
@@ -53,4 +56,9 @@
 	font-weight: 300;
 	color: $white;
 	margin-top: 40px;
+}
+
+.beer-logo-2 {
+	margin-right: -15px;
+	margin-top: -45px;
 }

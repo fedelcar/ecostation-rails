@@ -1,15 +1,9 @@
-$(window).load ->
+$(window).load =>
   handler = Gmaps.build('Google')
-  stations = []
-  $('.coords').each (index) ->
-    stations.push
-      lat: $(this).find('#lat').val()
-      lng: $(this).find('#lng').val()
-    return
-  handler.buildMap { internal: id: 'map' }, ->
-    markers = handler.addMarkers(stations)
-    handler.bounds.extendWith markers
-    handler.fitMapToBounds()
-    return
-  return
-# apikey AIzaSyA0cCyxAN3Gnm-trv35XPdipaIZLQHI_uU
+  handler.buildMap { provider: {}, internal: {id: 'map'}}, () =>
+    handler.addMarkers(Eco.markers)
+    handler.getMap().setZoom(12)
+    handler.getMap().setCenter({
+      lat: -34.5908133,
+      lng: -58.4501504
+    })

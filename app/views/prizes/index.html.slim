@@ -1,16 +1,9 @@
-= image_tag('Background.png', class: 'bg black-bg')
+= image_tag('Background.png', class: 'bg')
 .row
 	.title-text-bottles.text-center		
-		= label_tag nil, 'Actualmente tenés ', class: 'bottle-title'
+		= image_tag 'bottle-blue.png', class: 'beer-logo-2'
 	    = label_tag nil, @bottles, class: 'bottle-title-number bottle-title blue-5-label'
-	    = label_tag nil, ' botellas acumuladas', class: 'bottle-title white-label'
-.row.text-center
-	.value-subtitle
-		= label_tag nil, 'Valor sugerido', class: 'white-label h1'
-	    = label_tag nil, " $#{@value}", class: 'blue-5-label h1 strong'
-
-.row.text-center
-	= label_tag nil, 'Canjealas por:', class: 'trade-them-for-subtitle'
+	    = label_tag nil, ' botellas acumuladas', class: 'bottle-title blue-5-label'
 
 .row
 	.col-md-offset-1.col-md-10
