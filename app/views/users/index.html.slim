@@ -21,9 +21,9 @@
       /     = label_tag nil, 4 - @bottles, class: 'texto-home-recompensa numero-recompensa' 
       /   .title-text-bottles style='float:left;width:350px;float:left;text-align:center'
       /     = label_tag nil, 'botellas para la proxima recompensa', class: 'texto-home-recompensa' 
-.title-text-bottles.text-center   
-  = label_tag nil, 'Ya ahorraste', class: 'bottle-title blue-5-label'      
-.row
+.title-text-bottles.text-center.background-blue 
+  = label_tag nil, 'Tu impacto', class: 'bottle-title'      
+.row.background-blue
   div style=("width:600px;margin:0 auto;") 
     .cuadrado-ahorro.purple-border
       img class='icono-pedorro' src='assets/co2-gas.png'/
@@ -35,30 +35,30 @@
       img class='icono-pedorro' src='assets/coin.png'/
       .clase-numero-ahorro style="estilo1 green-label"
         .green-10-label
-          = "$#{@bottles * 7}"
+          = "$#{(@bottles * 7).round(0)}"
       .clase-texto-ahorro style="estilo2"  Pesos 
     .cuadrado-ahorro.red-border
       img class='icono-pedorro' src='assets/garbage.png'/
       .clase-numero-ahorro style="estilo1 red-label" 
         .red-label
-          = @bottles * 0.5
+          = (@bottles * 0.5).round(2)
       .clase-texto-ahorro style="estilo2"  Kg de Basura  
     .cuadrado-ahorro.yellow-border
       img class='icono-pedorro' src='assets/light-bulb.png'/
       .clase-numero-ahorro style="estilo1 yellow-label"
         .yellow-label
-          = @bottles * 0.3
+          = (@bottles * 0.3).round(2)
       .clase-texto-ahorro style="estilo2"  Horas de Lampara 50w prendida 
     .cuadrado-ahorro.blue-border
       img class='icono-pedorro' src='assets/drop.png'/
       .clase-numero-ahorro style="estilo1 blue-10-label"
         .blue-10-label
-          = @bottles * 0.5
+          = (@bottles * 0.5).round(2)
       .clase-texto-ahorro style="estilo2"  Lts de Agua  
     .cuadrado-ahorro.green-border
       img class='icono-pedorro' src='assets/koala-head.png'/
       .clase-numero-ahorro style="estilo1 green-label"
         .green-10-label
-          = @bottles * 3
+          = (@bottles * 3).round(0)
       .clase-texto-ahorro style="estilo2"  Koalas Salvados 
-.row.space-50
+.row.space-50.background-blue
