@@ -39,8 +39,24 @@
   color: $grey-3;
 }
 
+.yellow-label {
+  color: $yellow;
+}
+
+.green-10-label {
+  color: $light-green;
+}
+
+.blue-10-label {
+  color: $blue-10;
+}
+
 .red-label {
   color: $red;
+}
+
+.green-label {
+  color: $blue-5;
 }
 
 .green-label {
@@ -71,12 +87,16 @@
   color: $blue-7;
 }
 
+.blue-10 {
+  color: $blue-10;
+}
+
 .white-label {
   color: $white;
 }
 
 .purple-label {
-  color: $purple-2;
+  color: $purple-1;
 }
 
 .grey-label {
@@ -500,33 +520,36 @@ body {
 }
 
 
-.cuadrado-ahorro{
-  width:200px;
-  height:200px;
-  border:1px solid #3BCCFF;
-  margin:10px 10px;
-  float:left;
-  background-color:white;
+.cuadrado-ahorro {
+  width: 200px;
+  height: 200px;
+  margin: 20px 20px;
+  float: left;
+  background-color: white;
 }
 
-.cuadrado-ahorro-2{
-  width:200px;
-  height:200px;
-  border:1px solid #fc5130;
-  margin:10px 10px;
-  float:left;
-  background-color:white;
+.green-border {
+  border:1px solid $light-green;
 }
-.cuadrado-ahorro-3{
-  width:200px;
-  height:200px;
-  border:1px solid #C1B300;
-  margin:10px 10px;
-  float:left;
-  background-color:white;
+
+.blue-border {
+  border:1px solid $blue-10;
 }
+
+.yellow-border {
+  border:1px solid $yellow;
+}
+
+.red-border {
+  border:1px solid $red;
+}
+
+.purple-border {
+  border:1px solid $purple-1;
+}
+
 
 .icono-pedorro{
   margin:6px;
-
+  height: 32px;
 }

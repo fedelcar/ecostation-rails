@@ -4,23 +4,8 @@
 		= image_tag 'bottle-blue.png', class: 'beer-logo-2'
 	    = label_tag nil, @bottles, class: 'bottle-title-number bottle-title blue-5-label'
 	    = label_tag nil, ' botellas acumuladas', class: 'bottle-title blue-5-label'
-
 .row
-	.col-md-offset-1.col-md-10
+	.col-md-offset-2.col-md-8
 		.col-md-4
-			.box.black-box
-				.text-center.box-header
-					= label_tag nil, " $#{@discount_value}", class: 'blue-5-label'
-					br
-					= label_tag nil, 'en alguno de estos medios', class: 'white-label'
 		.col-md-4
-			.box.blue-box
-				.text-center.box-header
-					= label_tag nil, " $#{@bottles_value}", class: 'blue-7-label'
-					br
-					= label_tag nil, 'en cervezas ABInBev', class: 'white-label'
-					= label_tag nil, '(Quilmes, Imperial, Andes, Budweiser, Brahma, Stella Artois, Corona)', class: 'white-label'
 		.col-md-4
-			.box.black-box
-				.text-center.box-header.flex
-						= label_tag nil, 'O por alguno de estos premios', class: 'header'
