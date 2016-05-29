@@ -4,6 +4,10 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
 
+  def index
+    @missing = 20 - current_user.bottles
+  end
+
   def update
     current_user.update_attributes(user_params)
     redirect_to edit_user_path

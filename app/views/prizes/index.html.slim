@@ -6,18 +6,17 @@
 .row.margin-20
 	.col-md-offset-2.col-md-8 style='margin-top:30px;'
 		.col-md-4
-			.circle style="margin:0 auto;"
-				= image_tag 'bag.png', class: 'center-image'
+			.circle.side style="margin:0 auto;"
+				= image_tag 'gift.png', class: 'center-image'
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
-		          	= "$#{(@discount_value).round}"
-      			.clase-texto-ahorro style="estilo2"  Para retirar en efectivo
-		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#payments"
+		          	= "$#{(@bottles * 7 * 1.1).round}"
+      			.clase-texto-ahorro style="estilo2"  Productos Quilmes para tu hogar.
+		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#prizes"
 		    	| Canjear
-
 		.col-md-4
-			.circle style="margin:0 auto;"
+			.circle.center-circle style="margin:0 auto;"
 				= image_tag 'beer-crate.png', class: 'center-image'
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
@@ -27,14 +26,14 @@
 		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#markets"
 		    	| Canjear
 		.col-md-4
-			.circle style="margin:0 auto;"
-				= image_tag 'gift.png', class: 'center-image'
+			.circle.side style="margin:0 auto;"
+				= image_tag 'bag.png', class: 'center-image'
 		    .cuadrado-ahorro-canjear
 		      	.clase-numero-ahorro-canjear style="estilo1 green-label"
 		        	.green-10-label
-		          	= "$#{(@bottles * 7 * 1.1).round}"
-      			.clase-texto-ahorro style="estilo2"  Productos Quilmes para tu hogar.
-		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#prizes"
+		          	= "$#{(@discount_value).round}"
+      			.clase-texto-ahorro style="estilo2"  Para retirar en efectivo
+		    button class="boton-canjear btn button button-general trade-button-2" data-toggle="modal" data-target="#payments"
 		    	| Canjear
 
 .modal.fade#payments tabindex="-1" role="dialog" aria-labelledby="payments"
