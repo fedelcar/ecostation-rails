@@ -1,35 +1,39 @@
 = image_tag('Background.png', class: 'bg')
 .row
-  .title-text-bottles.text-center   
-    = label_tag nil, 'Ya retornaste ', class: 'bottle-title'
-    = label_tag nil, '35', class: 'bottle-title-number bottle-title blue-5-label'
-    = label_tag nil, ' botellas en total', class: 'bottle-title white%-label'
-
   div style=("width:670px;margin:0 auto;") 
-    .cuadrado-ahorro 
+    .cuadrado-ahorro.purple-border
       img class='icono-pedorro' src='assets/co2-gas.png'/
       .clase-numero-ahorro style="estilo1" 
-        = @bottles * 0.1
+        .purple-label
+          = @bottles * 0.1
       .clase-texto-ahorro style="estilo2"  Kg de CO2
-    .cuadrado-ahorro-2 
-      img class='icono-pedorro' src='assets/garbage.png'/
-      .clase-numero-ahorro style="estilo1" 
-        = @bottles * 0.5
-      .clase-texto-ahorro style="estilo2"  Kg de Basura  
-    .cuadrado-ahorro-3
-      img class='icono-pedorro' src='assets/bright-lightbulb.png'/
-      .clase-numero-ahorro style="estilo1"  12
-      .clase-texto-ahorro style="estilo2"  Horas de Lampara 50w prendida 
-    .cuadrado-ahorro 
-      img class='icono-pedorro' src='assets/drop.png'/
-      .clase-numero-ahorro style="estilo1"  78
-      .clase-texto-ahorro style="estilo2"  Lts de Agua  
-    .cuadrado-ahorro-2 
+    .cuadrado-ahorro.green-border
       img class='icono-pedorro' src='assets/coin.png'/
-      .clase-numero-ahorro style="estilo1"
-        = "$#{@bottles * 7}"
+      .clase-numero-ahorro style="estilo1 green-label"
+        .green-10-label
+          = "$#{@bottles * 7}"
       .clase-texto-ahorro style="estilo2"  Dinero Ahorrado 
-    .cuadrado-ahorro-3
+    .cuadrado-ahorro.red-border
+      img class='icono-pedorro' src='assets/garbage.png'/
+      .clase-numero-ahorro style="estilo1 red-label" 
+        .red-label
+          = @bottles * 0.5
+      .clase-texto-ahorro style="estilo2"  Kg de Basura  
+    .cuadrado-ahorro.yellow-border
+      img class='icono-pedorro' src='assets/light-bulb.png'/
+      .clase-numero-ahorro style="estilo1 yellow-label"
+        .yellow-label
+          = @bottles * 0.3
+      .clase-texto-ahorro style="estilo2"  Horas de Lampara 50w prendida 
+    .cuadrado-ahorro.blue-border
+      img class='icono-pedorro' src='assets/drop.png'/
+      .clase-numero-ahorro style="estilo1 blue-10-label"
+        .blue-10-label
+          = @bottles * 0.5
+      .clase-texto-ahorro style="estilo2"  Lts de Agua  
+    .cuadrado-ahorro.green-border
       img class='icono-pedorro' src='assets/koala-head.png'/
-      .clase-numero-ahorro style="estilo1"  150
+      .clase-numero-ahorro style="estilo1 green-label"
+        .green-10-label
+          = @bottles * 3
       .clase-texto-ahorro style="estilo2"  Koalas Salvados 
