@@ -1,13 +1,19 @@
-= form_tag(controller: 'vinti', action: 'create') do
-  - unless @errors.blank?
-    #error_explanation
-      h2 = "#{pluralize(@errors.count, "error")} prohibited this payment to be done:"
-      ul
-        - @errors.each do |message|
-          li = message
-
-  = label_tag(:user, "Usuario de vinti")
-  = label_tag nil, @money
-  = text_field_tag(:user)
-
-  .actions = submit_tag 'Retirar'
+#sign-in
+  = image_tag("im3.jpg", class: 'bg')
+  .form-basic.transparent
+    .row.no-margin
+      .col-md-12.sign-up-form.transparent
+        .section-title.text-center
+          = label_tag nil, 'Retirar tu dinero'
+        .row
+          = image_tag "vinti.png", class: 'vinti-img'
+      .col-md-8.col-md-offset-2
+        = form_tag(controller: 'vinti', action: 'create')
+          .text-left
+            = label_tag nil, "Usuario de vinti", class: 'form-label login-label green-label text-left'
+            .text-center
+              = text_field_tag :user, nil, class: 'form-input input form-login'
+          .text-left
+            = label_tag nil, "Se acreditarán $#{@money}", class: 'form-label login-label green-label text-left'
+          div.text-center
+            .actions = submit_tag 'Retirar', class: 'btn button-general green-button submit-button full'
