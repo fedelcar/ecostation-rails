@@ -484,15 +484,49 @@ body {
 }
 
 .clase-numero-ahorro{
-  align:center;
+  text-align:center;
+    font-family:Helvetica Neue;
   font-size:100px;
-  color:$blue-5;
+  color:#848C97;
+  margin-top: 40px;
 }
 
 .clase-texto-ahorro{
-  align:center;
-  font-size:20px;
-  color:white;
-  margin-top:39px;
+  text-align:center;
+  font-family:Helvetica Neue;
+  font-size:16px;
+  color:#848C97;
+  margin: 45px 5px 0 5px;
 }
 
+
+.cuadrado-ahorro{
+  width:200px;
+  height:200px;
+  border:1px solid #3BCCFF;
+  margin:10px 10px;
+  float:left;
+  background-color:white;
+}
+
+.cuadrado-ahorro-2{
+  width:200px;
+  height:200px;
+  border:1px solid #fc5130;
+  margin:10px 10px;
+  float:left;
+  background-color:white;
+}
+.cuadrado-ahorro-3{
+  width:200px;
+  height:200px;
+  border:1px solid #C1B300;
+  margin:10px 10px;
+  float:left;
+  background-color:white;
+}
+
+.icono-pedorro{
+  margin:6px;
+
+}
